@@ -25,14 +25,46 @@ Let's break it down:
 
 The flow described above is what most CRUD web applications will implement, so it is important to get familiar with it, and to have a good mental model on how it works.
 
+## Resources 
+
+We design HTTP routes to map to CRUD operations on the database sitting behind the web server.
+
+For example, we could have the following routes mapped to each operation on the albums database:
+
+```
+# List all the albums
+Request: GET /albums
+Response: JSON list of albums
+
+# Read a single album
+Request: GET /albums/1
+Response: JSON of a single album
+
+# Create a new album
+Request: POST /albums
+  With Request Data: "title=OK Computer"
+Response: None (just creates the resource on the server)
+
+# Update a single album
+Request: PATCH /albums/1
+  With Request Data: "title=OK Computer"
+Response: None (just updates the resource on the server)
+
+# Delete an album
+Request: DELETE /albums/1
+Response: None (just deletes the resource on the server)
+```
+
 ## Downloading the program
 
-Use the provided codebase that contains code for an application interacting with a database.
+[Use this provided codebase as a starting point.](../resources/music_library_exemplar/) It contains a program that interacts with a database containing a few music albums.
+
+Create a database `albums` and setup the program.
 
 ```ruby
-bundle install
+cd music_library_exemplar
 
-# psql -h 127.0.0.1 music_library
+bundle install
 
 # Make sure the tests pass
 rspec
@@ -68,7 +100,7 @@ You should call the method `AlbumRepository#all` in the route block.
 
 ## Exercise Two
 
-Test-drive a route `POST /albums` to create a new album. The HTTP request sent to this route should contain three body parameters for:
+Use the Design recipe to test-drive a route `POST /albums` to create a new album. The HTTP request sent to this route should contain three body parameters for:
   * the `title` of the new album
   * the `release_year` of the new album
   * the `artist_id` of the new album

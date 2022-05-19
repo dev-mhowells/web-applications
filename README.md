@@ -20,20 +20,22 @@ Go through these exercises and learn about the HTTP protocol and the Request and
 
 Go through these exercises and learn how to setup and gradually build a program which exposes a database through HTTP endpoints.
 
+Some of these challenges include [Process Feedback Challenges](https://github.com/makersacademy/golden-square/blob/main/pills/process_feedback_challenges.md), in which you record yourself performing the task and share it with your coach for feedback. These are tagged with a 📡.
+
 1. [Setting up a Sinatra project](./challenges/01_setting_up_sinatra_project.ed.md)
 2. [Building routes](./challenges/02_building_a_route.ed.md)
-3. [Test-driving routes](./challenges/03_test_driving_a_route.ed.md)
+3. [Test-driving routes](./challenges/03_test_driving_a_route.ed.md) 📡.
 4. [Using JSON to return structured content](./challenges/04_sending_json_response.ed.md)
-5. [Test-driving routes to interface with a database](./challenges/05_test_driving_route_with_database.ed.md)
+5. [Test-driving routes to interface with a database](./challenges/05_test_driving_route_with_database.ed.md) 📡.
 6. [Deploying your web server](./challenges/06_deploying.ed.md)
 
 ## Phase Three: HTML & ERB Bites
 
-7. Using HTML to return browser-friendly content.
-7. Using ERB to generate dynamic HTML.
-8. Using links to send `GET` requests.
-9. Using the browser's developer console
-10. Using forms to send `POST` requests.
+7. [Using HTML to return browser-friendly content.](./html_bites/01_page_structure.ed.md)
+8. [Using ERB to generate dynamic HTML.](./html_bites/02_using_erb_dynamic_page.ed.md)
+9. [Using links to send `GET` requests.](./html_bites/03_using_links.ed.md)
+10. [Using the browser's developer console](./html_bites/04_the_developer_console.ed.md)
+11. [Using forms to send `POST` requests.](./html_bites/05_using_forms.ed.md) 📡
 
 ## Phase Four: Solo challenge
 

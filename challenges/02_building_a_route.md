@@ -63,29 +63,41 @@ We can also use `params` to retrieve _body parameters_ sent with `POST` request 
 
 ## Exercise One
 
+Work through the following in the project `hello_web_project`.
+
 Create a new route that responds to `GET` requests sent to the path `/hello`. It should return the text `'Hello'`.
+
+_(Don't forget to run the app using `rackup`)._
 
 Using Postman, send a request to the URL and check the received response is correct.
 
 ```
+# Request:
 GET http://localhost:9292/hello
 
+# Expected response:
 Hello
 ```
 
 ## Exercise Two
+
+Work through the following in the project `hello_web_project`.
 
 Create a new route that responds to `GET` requests sent to the path `/hello`. It should return the text `'Hello [NAME]'`, where `[NAME]` is replaced by the value of the `name` _query parameter_.
 
 Using Postman, send a request to the correct URL, by adding a query parameter `name` with your own name, and check the received response is correct.
 
 ```
+# Request:
 GET http://localhost:9292/hello?name=Leo
 
+# Expected response:
 Hello Leo
 ```
 
 ## Challenge
+
+Work through the following in the project `hello_web_project`.
 
 Create a new route that responds to `POST` requests sent to the path `/submit`.
 
@@ -96,12 +108,15 @@ It should return the text `'Thanks [NAME], you sent this message: "[MESSAGE]"'`,
 Using Postman, send a request to the correct URL, by adding _body parameters_ `name` and `message`, and check the received response is correct.
 
 ```
+# Request:
 POST http://localhost:9292/submit
 
+# Body parameters:
 name=Leo
-message=Hello
+message=Hello world
 
-Thanks Leo, you sent this message: "Hello"
+# Expected response:
+Thanks Leo, you sent this message: "Hello world"
 ```
 
 [Next Challenge](03_test_driving_a_route.md)

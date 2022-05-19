@@ -5,7 +5,7 @@ Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
 
 Learn to write an integration test for a route using RSpec.
 
-## Testing
+## Testing Routes with RSpec
 
 ```ruby
 require "spec_helper"
@@ -33,7 +33,7 @@ end
 
 _In the following exercises, we will use the shorthand notation `GET /some_path` (or `POST /some_path`) to designate a route which responds to `GET` HTTP requests to the path `/some_path`._ 
 
-## Testing request parameters
+### Testing request parameters
 
 ```ruby
 context "POST to /hello" do
@@ -48,37 +48,38 @@ context "POST to /hello" do
 end
 ```
 
+## Design Recipe
+
+We'll use [this Design recipe](../resources/sinatra_route_design_recipe_template.md) to support the process of design and test-driving of routes.
+
 ## Demonstration
 
 @TODO
 
-## Exercise One
+## Exercise
 
-_You can work in the same project directory for the following exercises, or choose to create a new Ruby & Sinatra project._
+_Work in the same project directory `hello_web_project` for the following exercises._
 
-Test-drive a new route `GET /names` which returns the text content `'Julia, Mary and Karim'`.
+Use the Design recipe to test-drive a new route `GET /names` which returns the text content `'Julia, Mary and Karim'`.
 
 You should assert that the response status code is `200` and that the response body is the correct string.
 
-## Exercise Two
-
-Test-drive a new route `POST /names` which:
-  * receives a body parameter `name` having some value (for example, `'Jill'`)
-  * returns the name in the response
-
-You should assert that the response status code is `200` and that the response body is the correct name that was sent in the request.
-
 ## Challenge
 
-Test-drive a new route `POST /random-order` which:
+Test-drive a new route `POST /sort-names` which:
   * receives a body parameter `names`, which is a comma-separated list of names.
   * returns the same list of names, but sorted in alphabetical order, in the response.
 
 ```
-POST http://localhost:9292/random-order
+# Request:
+
+POST http://localhost:9292/sort-names
+
+# Body parameters:
 
 names=Joe,Alice,Zoe,Julia,Kieran
 
+# Expected response:
 
 Alice,Joe,Julia,Kieran,Zoe
 ```

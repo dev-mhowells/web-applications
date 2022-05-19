@@ -10,11 +10,9 @@ Learn to return HTML responses to be viewed in a web browser.
 
 ## Intro
 
-Web browsers are clients.
+Web browsers are clients. When a web browser sends a request and receives a response, that response is displayed to the user.
 
-When a web browser sends a request and receives a response, it is displayed to the user.
-
-If that response contains HTML code, that code is interpreted and transformed into a graphical, user-friendly web page.
+If that response contains HTML code, that code is interpreted and transformed into a user-friendly web page.
 
 Whenever you visit a website using your web browser, the following happens behind the scenes:
   * the web browser sends a `GET` request to the server.
@@ -28,13 +26,69 @@ If we reload the page, the same process happens. If we visit a different page, t
 
 Every time we visit a URL, the web browser acts as a client — it sends a `GET` request to this URL and path, gets the response, and interprets the HTML as a user-friendly web page. It is really important that you keep this in mind when building, using and debugging your web applications, to have a good idea of what is happening.
 
+## Returning HTML
+
+To avoid putting HTML code in our app file, we write the HTML in a separate file, also called a _view file_.
+
+This file is in a `views/` directory and has a `.erb` extension. We'll see later why.
+
+```
+app.rb
+lib/
+  ...
+views/
+  index.erb
+```
+
+```ruby
+# file: app.rb
+require 'sinatra/base'
+
+class WebApplication < Sinatra::Base 
+
+  get '/' do
+    return erb(:index)
+  end
+end
+```
+
+```html
+<!-- file: views/index.erb -->
+<html>
+  <head></head>
+  <body>
+    <h1>Welcome to my page</h1>
+  </body>
+</html>
+```
+
+## Testing for HTML content
+
+```ruby
+context "GET to /" do
+  it 'contains a h1 title' do
+    response = get('/')
+
+    expect(response.status).to include('<h1>Hello</h1>')
+  end
+  
+  it 'contains a div' do
+    response = get('/')
+
+    expect(response.status).to include('<div>')
+  end
+end
+```
+
 ## Demonstration
 
 @TODO
 
-## Exercise One
+## Exercise
 
-Change the `GET /hello` route from the previous project so it returns the following HTML:
+In the project `hello_web_project`.
+
+Test-drive and update the `GET /hello` route so it returns the greeting message as an HTML page:
 
 ```html
 <html>
@@ -45,8 +99,9 @@ Change the `GET /hello` route from the previous project so it returns the follow
 </html>
 ```
 
-## Challenge
+_(Don't forget to run the app using `rackup`)._
 
+Use your web browser to access the page.
 
 
 [Next Challenge](02_using_erb_dynamic_page.md)

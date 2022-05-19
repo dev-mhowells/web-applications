@@ -71,13 +71,9 @@ end
 
 We can call the `.to_json` method on either Hashes or Arrays, to convert them to JSON when returning the response.
 
-## Exercise One
+## Exercise
 
 Update the test and implementation code of the route `GET /names` so it returns a _JSON array_ of the list of names.
-
-## Exercise Two
-
-Update the test and implementation code of the route `POST /names` so it returns a _JSON array_ with the name sent in parameters.
 
 ## Challenge
 

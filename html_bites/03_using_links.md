@@ -22,19 +22,26 @@ However, when building websites, we don't want users to manually enter a new URL
 
 We use **links**, or **anchor links** for this. A link is an HTML tag that will be rendered as a hypertext link by the browser, so the user can click on it. This link points to a different URL. When the user clicks, the browser will send a new `GET` request to that URL, and eventually the page will change.
 
-The `<a>` HTML tag is used to create links.
+The `<a>` HTML tag is used to create links. The attribute `href` tells the browser which path it should send the next request to, when that link is clicked.
 
 ```html
 <a href="/about">Go to the about page</a>
 ```
 
+When the above link is clicked, the browser will send a new request `GET /about` to the server.
+
 ## Demonstration
 
 @TODO
 
-## Exercise One
+## Exercise
 
 ## Challenge
+
+Test-drive and implement the following changes to the `music_library_exemplar` project:
+1. The list of albums page returned by `GET /albums` should contain anchor links for each album listed.   
+  Each anchor link should direct to `GET /album?id={ID}` where `{ID}` needs to be the corresponding id.
+2. The route `GET /album` should return an HTML page for a single album.
 
 [Next Challenge](04_the_developer_console.md)
 

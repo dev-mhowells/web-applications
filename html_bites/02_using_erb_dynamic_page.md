@@ -10,13 +10,67 @@ Learn to use Embedded Ruby (ERB) syntax to dynamically generate HTML responses.
 
 ## Intro
 
+```ruby
+# file: app.rb
+require 'sinatra/base'
+
+class WebApplication < Sinatra::Base 
+
+  get '/hello' do
+    @name = params[:name]
+
+    return erb(:index)
+  end
+end
+```
+
+```erb
+<!-- file: views/index.erb -->
+<html>
+  <head></head>
+  <body>
+    <h1>Hello <%= @name %>!</h1>
+  </body>
+</html>
+```
+
 ## Demonstration
 
 @TODO
 
-## Exercise One
+## Exercise
+
 
 ## Challenge
+
+In the project `music_library_exemplar`.
+
+Test-drive and update the `GET /albums` route so it returns the list of albums as an HTML page:
+
+```html
+<html>
+  <head></head>
+  <body>
+    <h1>Albums</h1>
+
+    <div>
+      Title: Doolittle
+      Released: 1989
+    </div>
+
+    <div>
+      Title: Surfer Rosa
+      Released: 1988
+    </div>
+
+    <!-- ... -->
+  </body>
+</html>
+```
+
+_(Don't forget to run the app using `rackup`)._
+
+Use your web browser to access the page.
 
 [Next Challenge](03_using_links.md)
 

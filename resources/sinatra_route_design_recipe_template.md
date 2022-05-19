@@ -4,21 +4,25 @@ _Copy this design recipe template to test-drive a Sinatra route._
 
 ## 1. Design the Route Signature
 
-You'll need to decide on the **HTTP method**, the **path**, any **query parameters** (passed in the URL), or **body parameters** (passed in the request body), and what response is returned.
+You'll need to include:
+  * the **HTTP method**
+  * the **path**
+  * any **query parameters** (passed in the URL)
+  * or **body parameters** (passed in the request body)
 
 _Fill the table below with your own design._
 
-|Job|Method|Path|Query parameters?|Body parameters?|
+|What is it used for?|Method|Path|Query parameters?|Body parameters?|
 |--|--|--|--|--|
 |Gets a single post by its ID|`GET`|`/posts?id=1`|`id`|-|
 
 ## 2. Design the Response
 
-Depending on what code is executed by this route, it might return different responses, depending on the result.
+The route might return different responses, depending on the result.
 
 For example, a route for a specific blog post (by its ID) might return `200 OK` if the post exists, but `404 Not Found` if the post is not found in the database.
 
-Your response might return JSON or HTML code. 
+Your response might return plain text, JSON, or HTML code. 
 
 _Replace the below with your own design. Think of all the different possible responses your route will return._
 
@@ -48,7 +52,31 @@ _Replace the below with your own design. Think of all the different possible res
 </html>
 ```
 
-## 3. Write Tests
+## 3. Write Examples
+
+_Replace these with your own design._
+
+```
+# Request:
+
+GET /posts?id=1
+
+# Expected response:
+
+Response for 200 OK
+```
+
+```
+# Request:
+
+GET /posts?id=276278
+
+# Expected response:
+
+Response for 404 Not Found
+```
+
+## 4. Encode as Tests Examples
 
 ```ruby
 # EXAMPLE
@@ -78,7 +106,7 @@ describe Application do
 end
 ```
 
-## 4. Implement the Route
+## 5. Implement the Route
 
 Write the code in the Sinatra application class to implement the route behaviour.
 

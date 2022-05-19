@@ -22,6 +22,8 @@ In the most simple situations, there is one **server** but many different **clie
 
 Something to be aware of: the term "client" can reference slightly different things depending on the context — it can be the machine itself, or the software program used (usually a web browser, such as Firefox or Chrome). The term "server" can also be ambiguous and refer to either the machine or the software program running the program and responding to clients.
 
+In this module, "web server" will usually refer to a (Ruby) program that receives requests and sends back responses, and "client" will refer to either Postman or a web browser.
+
 ## HTTP
 
 Web clients and servers need to communicate through the network. They use a special language called the **HTTP protocol**. As web application developers, you'll almost never have to write any HTTP directly, but it's still important to understand the basics of how it works to effectively build and debug web applications. You'll learn more about HTTP in the following sections.
@@ -68,6 +70,10 @@ You should get the following output:
   "completed": false
 }
 ```
+
+## Demonstration
+
+@TODO
 
 ## Exercise
 
