@@ -12,9 +12,9 @@ By the end of this module, you will be able to:
 
 Go through these exercises and learn about the HTTP protocol and the Request and Response flow between a client and a server.
 
-1. [Introduction to HTTP.](./http_bites/01_intro_to_http.ed.md)
-2. [Requests and Responses](./http_bites/02_requests_and_responses.ed.md)
-3. [Sending request with parameters](./http_bites/03_request_parameters.ed.md)
+1. [Introduction to HTTP.](./http_bites/01_intro_to_http.md)
+2. [Requests and Responses](./http_bites/02_requests_and_responses.md)
+3. [Sending request with parameters](./http_bites/03_request_parameters.md)
 
 ## Phase Two
 
@@ -22,20 +22,20 @@ Go through these exercises and learn how to setup and gradually build a program 
 
 Some of these challenges include [Process Feedback Challenges](https://github.com/makersacademy/golden-square/blob/main/pills/process_feedback_challenges.md), in which you record yourself performing the task and share it with your coach for feedback. These are tagged with a 📡.
 
-1. [Setting up a Sinatra project](./challenges/01_setting_up_sinatra_project.ed.md)
-2. [Building routes](./challenges/02_building_a_route.ed.md)
-3. [Test-driving routes](./challenges/03_test_driving_a_route.ed.md) 📡.
-4. [Using JSON to return structured content](./challenges/04_sending_json_response.ed.md)
-5. [Test-driving routes to interface with a database](./challenges/05_test_driving_route_with_database.ed.md) 📡.
-6. [Deploying your web server](./challenges/06_deploying.ed.md)
+1. [Setting up a Sinatra project](./challenges/01_setting_up_sinatra_project.md)
+2. [Building routes](./challenges/02_building_a_route.md)
+3. [Test-driving routes](./challenges/03_test_driving_a_route.md) 📡.
+4. [Using JSON to return structured content](./challenges/04_sending_json_response.md)
+5. [Test-driving routes to interface with a database](./challenges/05_test_driving_route_with_database.md) 📡.
+6. [Deploying your web server](./challenges/06_deploying.md)
 
 ## Phase Three: HTML & ERB Bites
 
-7. [Using HTML to return browser-friendly content.](./html_bites/01_page_structure.ed.md)
-8. [Using ERB to generate dynamic HTML.](./html_bites/02_using_erb_dynamic_page.ed.md)
-9. [Using links to send `GET` requests.](./html_bites/03_using_links.ed.md)
-10. [Using the browser's developer console](./html_bites/04_the_developer_console.ed.md)
-11. [Using forms to send `POST` requests.](./html_bites/05_using_forms.ed.md) 📡
+7. [Using HTML to return browser-friendly content.](./html_bites/01_page_structure.md)
+8. [Using ERB to generate dynamic HTML.](./html_bites/02_using_erb_dynamic_page.md)
+9. [Using links to send `GET` requests.](./html_bites/03_using_links.md)
+10. [Using the browser's developer console](./html_bites/04_the_developer_console.md)
+11. [Using forms to send `POST` requests.](./html_bites/05_using_forms.md) 📡
 
 ## Phase Four: Solo challenge
 
