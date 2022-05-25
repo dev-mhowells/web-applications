@@ -38,10 +38,16 @@ When the above link is clicked, the browser will send a new request `GET /about`
 
 ## Challenge
 
+This is a process feedback challenge. That means you should record yourself doing it and
+submit that recording to your coach for feedback. [How do I do
+this?](https://github.com/makersacademy/golden-square/blob/main/pills/process_feedback_challenges.md)
+
 Test-drive and implement the following changes to the `music_library_exemplar` project:
 1. The list of albums page returned by `GET /albums` should contain anchor links for each album listed.   
   Each anchor link should direct to `GET /album?id={ID}` where `{ID}` needs to be the corresponding id.
 2. The route `GET /album` should return an HTML page for a single album.
+
+[After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as03).
 
 [Next Challenge](04_the_developer_console.md)
 

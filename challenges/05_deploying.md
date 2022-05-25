@@ -5,6 +5,14 @@ Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
 
 Learn to deploy an application using Heroku.
 
+## Intro
+
+It is now time to deploy your application so it runs remotely. Remember that this is how web server programs work in real-world situations: they run on a remote machine, and clients access it through the network, using HTTP requests and responses.
+
+In this section, you will use Heroku, which is a Cloud service allowing us to deploy programs without too much configuration and work. It has a limited free tier you can use for simple projects.
+
+First, [you'll need to create an account](https://signup.heroku.com/login). Then follow the steps below.
+
 ## Installing the Heroku CLI
 
 If you're on Mac, you can run the following command to install the CLI. Otherwise, [follow the instructions](https://devcenter.heroku.com/articles/heroku-cli) for your own system.
@@ -57,7 +65,7 @@ Deploy your previous challenge project to a new Heroku app.
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/06_deploying.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/06_deploying.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/06_deploying.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/06_deploying.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/06_deploying.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/05_deploying.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/05_deploying.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/05_deploying.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/05_deploying.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=challenges/05_deploying.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

@@ -26,7 +26,11 @@ If we reload the page, the same process happens. If we visit a different page, t
 
 Every time we visit a URL, the web browser acts as a client — it sends a `GET` request to this URL and path, gets the response, and interprets the HTML as a user-friendly web page. It is really important that you keep this in mind when building, using and debugging your web applications, to have a good idea of what is happening.
 
+[Go here to learn Just enough HTML syntax](../pills/just_enough_html.md) for the following challenges.
+
 ## Returning HTML
+
+We don't want to put HTML code in the middle of our Sinatra application class. That's because we want to keep these two concerns separated - the program logic (in Ruby files) and the response content (the HTML code which will be sent to the browser).
 
 To avoid putting HTML code in our app file, we write the HTML in a separate file, also called a _view file_.
 
@@ -47,6 +51,9 @@ require 'sinatra/base'
 class WebApplication < Sinatra::Base 
 
   get '/' do
+    # The erb method takes the view file name (as a Ruby symbol)
+    # and reads its content so it can be sent 
+    # in the response.
     return erb(:index)
   end
 end
@@ -54,6 +61,7 @@ end
 
 ```html
 <!-- file: views/index.erb -->
+
 <html>
   <head></head>
   <body>
@@ -63,6 +71,8 @@ end
 ```
 
 ## Testing for HTML content
+
+We test HTML responses the same way we would for regular text responses - we can also use the `include` matcher to only assert a specific piece of HTML is present in the content.  
 
 ```ruby
 context "GET to /" do

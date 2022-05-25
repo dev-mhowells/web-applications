@@ -10,6 +10,12 @@ Learn to use Embedded Ruby (ERB) syntax to dynamically generate HTML responses.
 
 ## Intro
 
+The HTML content we put in views is again, static by default.
+
+We can use ERB (for Embedded Ruby) syntax to generate dynamically the final HTML that will be sent to the client, by replacing the dynamic parts of the view, which are delimited by ERB tags (in between `<%=` and `%>`).
+
+The following example shows how a variable `@name` can be used to change the view HTML content:
+
 ```ruby
 # file: app.rb
 require 'sinatra/base'
@@ -17,22 +23,34 @@ require 'sinatra/base'
 class WebApplication < Sinatra::Base 
 
   get '/hello' do
+    # Set an instance variable in the route block.
     @name = params[:name]
+
+    # The process is then the following:
+    #
+    # 1. Ruby reads the .erb view file
+    # 2. It looks for any ERB tags and replaces it by their final value
+    # 3. The final generated HTML is sent in the response
 
     return erb(:index)
   end
 end
 ```
 
+The value of the instance variable is then accessible in the `view` file:
+
 ```erb
 <!-- file: views/index.erb -->
 <html>
   <head></head>
   <body>
+    <!-- the ERB tag below will be replaced by the value of @name -->
     <h1>Hello <%= @name %>!</h1>
   </body>
 </html>
 ```
+
+[Go here to learn Just enough ERB syntax](../pills/just_enough_erb.md) for the following challenges.
 
 ## Demonstration
 
@@ -40,6 +58,24 @@ end
 
 ## Exercise
 
+In the project `music_library_exemplar`.
+
+Test-drive and implement a `GET /albums/:id` route so it returns the HTML content for a single album:
+
+```html
+<!-- Example for GET /albums/1 -->
+
+<html>
+  <head></head>
+  <body>
+    <h1>Doolittle</h1>
+    <p>
+      Release year: 1989
+      Artist: Pixies
+    </p>
+  </body>
+</html>
+```
 
 ## Challenge
 
@@ -48,6 +84,8 @@ In the project `music_library_exemplar`.
 Test-drive and update the `GET /albums` route so it returns the list of albums as an HTML page:
 
 ```html
+<!-- GET /albums -->
+
 <html>
   <head></head>
   <body>

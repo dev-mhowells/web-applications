@@ -7,7 +7,12 @@ Learn to build a "route" to respond to HTTP requests.
 
 ## Routing
 
-Remember that a web server receives HTTP requests, execute some code depending on the received request, and returns a response. To know which code to execute depending on the request, internally Sinatra keeps a "routing" table, which associates a request **method and path** to a block of Ruby code.
+Remember that a web server receives HTTP requests, execute some code depending on the received request, and returns a response. To know which code to execute depending on the request, internally Sinatra keeps a "routing" table, which associates a request **method and path** to a block of Ruby code:
+
+|Method|Path|Ruby code|
+|-|-|-|
+|GET|/|`# some code to execute`
+|POST|/|`# other code to execute`
 
 For example, receiving a `GET` request on the path `/hello` will execute some code. Receiving a different `POST` request on the same path (or perhaps a different one) will execute different code (and in turn lead to a different returned response).  
 
@@ -39,19 +44,51 @@ The Ruby block between the `do` and `end` associated with a route is called a "r
 
 When Sinatra received a request, it looks through all the route blocks configured in that class, and execute the code of the first one matching the request.
 
+```ruby
+# Example when Sinatra receives a request
+# GET /
+
+class WebApplication < Sinatra::Base 
+  # This route is not executed (the method doesn't match).
+  post '/' do
+
+  end
+
+  # This route is not executed (the path doesn't match).
+  get '/hello' do
+    
+  end
+
+  # This route matches! The code inside the block will be executed now.
+  get '/' do
+
+  end
+
+  # This route matches, but is not executed - only the first one matching (above) is.
+  get '/' do
+
+  end
+end
+```
+
+_In the following sections, we will use the shorthand notation `GET /some_path` to designate a route which responds to `GET` requests to the path `/some_path`._ 
+
 ## Accessing request parameters
 
 We can use the `params` hash inside a route block to access the request _query parameters._
 
-If a client sends a request with `?name=David` at the end of the URL (a query parameter with key `name` and value `David`), this parameter will be present in the `params` hash, and we can access the value like this:
+If a client sends a request with a query parameter with key `name` and value `David`, this parameter will be present in the `params` hash, and we can access the value like this:
 
 ```ruby
+# Request:
+# GET /?name=David
+
 get '/' do
   name = params[:name] # The value is 'David'
 
   # Do something with `name`...
 
-  return 'Some response data'
+  return "Hello #{name}"
 end
 ```
 
@@ -61,25 +98,7 @@ We can also use `params` to retrieve _body parameters_ sent with `POST` request 
 
 @TODO
 
-## Exercise One
-
-Work through the following in the project `hello_web_project`.
-
-Create a new route that responds to `GET` requests sent to the path `/hello`. It should return the text `'Hello'`.
-
-_(Don't forget to run the app using `rackup`)._
-
-Using Postman, send a request to the URL and check the received response is correct.
-
-```
-# Request:
-GET http://localhost:9292/hello
-
-# Expected response:
-Hello
-```
-
-## Exercise Two
+## Exercise
 
 Work through the following in the project `hello_web_project`.
 
@@ -89,9 +108,9 @@ Using Postman, send a request to the correct URL, by adding a query parameter `n
 
 ```
 # Request:
-GET http://localhost:9292/hello?name=Leo
+GET /hello?name=Leo
 
-# Expected response:
+# Expected response (200 OK):
 Hello Leo
 ```
 
@@ -109,13 +128,13 @@ Using Postman, send a request to the correct URL, by adding _body parameters_ `n
 
 ```
 # Request:
-POST http://localhost:9292/submit
+POST /submit
 
-# Body parameters:
+# With body parameters:
 name=Leo
 message=Hello world
 
-# Expected response:
+# Expected response (2OO OK):
 Thanks Leo, you sent this message: "Hello world"
 ```
 

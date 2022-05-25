@@ -1,15 +1,25 @@
 # file: app.rb
-
+require 'sinatra'
+require "sinatra/reloader"
 require_relative 'lib/database_connection'
+require_relative 'lib/album_repository'
 
-# We need to give the database name to the method `connect`.
-DatabaseConnection.connect('albums')
+DatabaseConnection.connect('music_library')
 
-# Perform a SQL query on the database and get the result set.
-sql = 'SELECT id, title, release_year FROM albums;'
-result = DatabaseConnection.exec_params(sql, [])
+class Application < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
 
-# Print out each record from the result set .
-result.each do |record|
-  p record
+  get '/albums' do
+    album_repository = AlbumRepository.new
+    albums = album_repository.all
+
+    albums_response = ""
+    albums.each do |album|
+      albums_response += "#{album.title}\n" 
+    end
+
+    return albums_response
+  end
 end

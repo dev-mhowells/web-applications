@@ -7,7 +7,11 @@ Learn to write an integration test for a route using RSpec.
 
 ## Testing Routes with RSpec
 
+We can create integration tests for our routes using RSpec. Here's an example:
+
 ```ruby
+# file: spec/integration/application_spec.rb
+
 require "spec_helper"
 require "rack/test"
 require_relative '../../app'
@@ -21,11 +25,27 @@ describe Application do
   let(:app) { Application.new }
 
   context "GET to /" do
-    it 'returns 200 OK' do
-      response = get('/')
+    it "returns 200 OK with the right content" do
+      # Send a GET request to /
+      # and returns a response object we can test.
+      response = get("/")
 
+      # Assert the response status code and body.
       expect(response.status).to eq(200)
-      expect(response.body).to eq('Some response data')
+      expect(response.body).to eq("Some response data")
+    end
+  end
+
+  context "POST to /submit" do
+    it "returns 200 OK with the right content" do
+      # Send a POST request to /submit
+      # with some body parameters
+      # and returns a response object we can test.
+      response = post("/submit", name: "Dana", some_other_param: 12)
+
+      # Assert the response status code and body.
+      expect(response.status).to eq(200)
+      expect(response.body).to eq("Hello Dana")
     end
   end
 end
@@ -33,20 +53,6 @@ end
 
 _In the following exercises, we will use the shorthand notation `GET /some_path` (or `POST /some_path`) to designate a route which responds to `GET` HTTP requests to the path `/some_path`._ 
 
-### Testing request parameters
-
-```ruby
-context "POST to /hello" do
-  it 'returns 200 OK' do
-    # Sending a POST request to /hello
-    # with a body parameter name=Paul
-    response = post('/hello', name: 'Paul', some_other_param: 123)
-
-    expect(response.status).to eq(200)
-    expect(response.body).to eq('Hello Paul')
-  end
-end
-```
 
 ## Design Recipe
 
@@ -60,11 +66,23 @@ We'll use [this Design recipe](../resources/sinatra_route_design_recipe_template
 
 _Work in the same project directory `hello_web_project` for the following exercises._
 
-Use the Design recipe to test-drive a new route `GET /names` which returns the text content `'Julia, Mary and Karim'`.
+Use the Design recipe to test-drive a new route `GET /names` which returns the text content `'Julia, Mary, Karim'`.
 
 You should assert that the response status code is `200` and that the response body is the correct string.
 
+```
+# Request:
+GET /names
+
+# Expected response (2OO OK):
+Julia, Mary, Karim
+```
+
 ## Challenge
+
+This is a process feedback challenge. That means you should record yourself doing it and
+submit that recording to your coach for feedback. [How do I do
+this?](https://github.com/makersacademy/golden-square/blob/main/pills/process_feedback_challenges.md)
 
 Test-drive a new route `POST /sort-names` which:
   * receives a body parameter `names`, which is a comma-separated list of names.
@@ -72,19 +90,18 @@ Test-drive a new route `POST /sort-names` which:
 
 ```
 # Request:
-
 POST http://localhost:9292/sort-names
 
-# Body parameters:
-
+# With body parameters:
 names=Joe,Alice,Zoe,Julia,Kieran
 
 # Expected response:
-
 Alice,Joe,Julia,Kieran,Zoe
 ```
 
-[Next Challenge](04_sending_json_response.md)
+[After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as01).
+
+[Next Challenge](04_test_driving_route_with_database.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
