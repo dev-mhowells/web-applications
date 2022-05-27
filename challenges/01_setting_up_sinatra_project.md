@@ -5,15 +5,39 @@ Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
 
 Learn to setup a Ruby project with the Sinatra library.
 
-## About Sinatra
+<!-- OMITTED -->
 
-Sinatra is a small Ruby library we use to create web server programs using Ruby. We use Sinatra to configure which requests our program can respond to, and what logic needs to be done to answer those requests.
+## Sinatra
+
+Sinatra is a small Ruby library we use to create web server programs using Ruby. We use Sinatra to configure which requests our program can respond to, and what logic needs to be done to respond to those requests.
 
 In the following exercises and challenges, you will learn how to build a web server program that receives HTTP requests from a client (such as Postman), and returns HTTP responses to it.
 
 ## Exercise
 
 [Follow this guidance](../pills/setting_up_sinatra_project.ed.md) to setup a new project directory `hello_web_project` with RSpec and Sinatra.
+
+We've got two different ways to interact with the program:
+  * By running RSpec tests that will simulate HTTP requests and assert on responses.
+  * By running the web server as a background program, using `rackup`, so we can manually send requests to it.
+
+Launch your server program with the `rackup` command from your project directory:
+
+```
+$ rackup
+
+[2022-05-27 12:26:42] INFO  WEBrick 1.7.0
+[2022-05-27 12:26:42] INFO  ruby 3.0.1 (2021-04-05) [x86_64-darwin20]
+[2022-05-27 12:26:42] INFO  WEBrick::HTTPServer#start: pid=87298 port=9292
+```
+
+We can now send HTTP requests using `curl`:
+
+```
+curl http://localhost:9292
+```
+
+(`localhost` is the host name for your local machine, and 9292 is the network port on which Sinatra is running).
 
 ## Working Locally
 

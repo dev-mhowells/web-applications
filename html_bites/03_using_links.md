@@ -1,10 +1,7 @@
 # Using links
 
-_**This is a Makers Bite.** Bites are designed to train specific skills or
-tools. They contain an intro, a demonstration video, some exercises with an
-example solution video, and a challenge without a solution video for you to test
-your learning. [Read more about how to use Makers
-Bites.](https://github.com/makersacademy/course/blob/main/labels/bites.md)_
+_**This is a Makers Vine.** Vines are designed to gradually build up sophisticated skills. They contain a mixture of text and video, and may contain some challenge exercises without proposed solutions. [Read more about how to use Makers
+Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
 
 Learn to use HTML links to make the browser send `GET` requests.
 
@@ -36,6 +33,8 @@ When the above link is clicked, the browser will send a new request `GET /about`
 
 ## Exercise
 
+@TODO
+
 ## Challenge
 
 This is a process feedback challenge. That means you should record yourself doing it and
@@ -49,7 +48,7 @@ Test-drive and implement the following changes to the `music_library_exemplar` p
 
 [After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as03).
 
-[Next Challenge](04_the_developer_console.md)
+[Next Challenge](04_using_forms.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

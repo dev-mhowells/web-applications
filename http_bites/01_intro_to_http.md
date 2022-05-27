@@ -8,6 +8,10 @@ Bites.](https://github.com/makersacademy/course/blob/main/labels/bites.md)_
 
 Learn to explain the basics of how the HTTP protocol works.
 
+## Introduction Video
+
+@TODO
+
 ## Clients and Servers
 
 So far you've been building programs than run on a single machine — yours. However to deploy applications to users, we need a way for them to access and interact with the program. 
@@ -26,7 +30,9 @@ In this module, "web server" will usually refer to a (Ruby) program that receive
 
 ## HTTP
 
-Web clients and servers need to communicate through the network. They use a special language called the **HTTP protocol**. As web application developers, you'll almost never have to write any HTTP directly, but it's still important to understand the basics of how it works to effectively build and debug web applications. You'll learn more about HTTP in the following sections.
+Web clients and servers need to communicate through the network. They use a special language called the **HTTP protocol**.
+
+As web application developers, you'll almost never have to write any HTTP directly, but it's still important to understand the basics of how it works to effectively build and debug web applications. You'll learn more about HTTP in the following sections.
 
 At a high-level, when a client needs to interact with the program, it sends a **request** to the server through the Internet. When the server program receives this request, it does some work, perhaps communicate with a database behind the scenes, and then sends back a **response** to the client.
 
@@ -70,19 +76,6 @@ You should get the following output:
   "completed": false
 }
 ```
-
-## Demonstration
-
-@TODO
-
-## Exercise
-
-Create a small diagram of the HTTP request-response cycle from the example above.
-
-Make sure your diagram contains the following things:
-  * the client
-  * the server
-  * the direction of the request and response
 
 
 [Next Challenge](02_requests_and_responses.md)

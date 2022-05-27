@@ -7,12 +7,11 @@ _Copy this design recipe template to test-drive a Sinatra route._
 You'll need to include:
   * the **HTTP method**
   * the **path**
-  * any **query parameters** (passed in the URL)
-  * or **body parameters** (passed in the request body)
+  * any **query parameters** (passed in the URL) or **body parameters** (passed in the request body)
 
 _Fill the table below with your own design._
 
-|What is it used for?|Method|Path|Query parameters?|Body parameters?|
+|What does it do?|Method|Path|Query parameters?|Body parameters?|
 |--|--|--|--|--|
 |Gets a single post by its ID|`GET`|`/posts?id=1`|`id`|-|
 
@@ -85,6 +84,8 @@ Response for 404 Not Found
 require "spec_helper"
 
 describe Application do
+  include Rack::Test::Methods
+
   let(:app) { Application.new }
 
   context "GET /" do
@@ -108,7 +109,7 @@ end
 
 ## 5. Implement the Route
 
-Write the code in the Sinatra application class to implement the route behaviour.
+Write the route and web server code to implement the route behaviour.
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

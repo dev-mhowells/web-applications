@@ -1,18 +1,15 @@
-# Using ERB to generate HTML
+# HTML and ERB Responses
 
-_**This is a Makers Bite.** Bites are designed to train specific skills or
-tools. They contain an intro, a demonstration video, some exercises with an
-example solution video, and a challenge without a solution video for you to test
-your learning. [Read more about how to use Makers
-Bites.](https://github.com/makersacademy/course/blob/main/labels/bites.md)_
+_**This is a Makers Vine.** Vines are designed to gradually build up sophisticated skills. They contain a mixture of text and video, and may contain some challenge exercises without proposed solutions. [Read more about how to use Makers
+Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
 
 Learn to use Embedded Ruby (ERB) syntax to dynamically generate HTML responses. 
 
 ## Intro
 
-The HTML content we put in views is again, static by default.
+The HTML content we put in views is static by default.
 
-We can use ERB (for Embedded Ruby) syntax to generate dynamically the final HTML that will be sent to the client, by replacing the dynamic parts of the view, which are delimited by ERB tags (in between `<%=` and `%>`).
+We can use ERB (for Embedded Ruby) syntax to generate dynamically the HTML that is sent to the client, by replacing the dynamic parts of the HTML, which are delimited by ERB tags (in between `<%=` and `%>`).
 
 The following example shows how a variable `@name` can be used to change the view HTML content:
 
@@ -50,7 +47,7 @@ The value of the instance variable is then accessible in the `view` file:
 </html>
 ```
 
-[Go here to learn Just enough ERB syntax](../pills/just_enough_erb.md) for the following challenges.
+[Use this as reference material on ERB syntax](../pills/just_enough_erb.md) for the following challenges.
 
 ## Demonstration
 

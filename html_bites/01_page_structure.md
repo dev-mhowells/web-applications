@@ -1,12 +1,11 @@
-# Using HTML 
+# HTML Responses
 
-_**This is a Makers Bite.** Bites are designed to train specific skills or
-tools. They contain an intro, a demonstration video, some exercises with an
-example solution video, and a challenge without a solution video for you to test
-your learning. [Read more about how to use Makers
-Bites.](https://github.com/makersacademy/course/blob/main/labels/bites.md)_
+_**This is a Makers Vine.** Vines are designed to gradually build up sophisticated skills. They contain a mixture of text and video, and may contain some challenge exercises without proposed solutions. [Read more about how to use Makers
+Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
 
 Learn to return HTML responses to be viewed in a web browser.
+
+<!-- OMITTED -->
 
 ## Intro
 
@@ -26,7 +25,7 @@ If we reload the page, the same process happens. If we visit a different page, t
 
 Every time we visit a URL, the web browser acts as a client — it sends a `GET` request to this URL and path, gets the response, and interprets the HTML as a user-friendly web page. It is really important that you keep this in mind when building, using and debugging your web applications, to have a good idea of what is happening.
 
-[Go here to learn Just enough HTML syntax](../pills/just_enough_html.md) for the following challenges.
+[Use this HTML reference material](../pills/just_enough_html.md) for the following challenges.
 
 ## Returning HTML
 
@@ -79,13 +78,13 @@ context "GET to /" do
   it 'contains a h1 title' do
     response = get('/')
 
-    expect(response.status).to include('<h1>Hello</h1>')
+    expect(response.body).to include('<h1>Hello</h1>')
   end
   
   it 'contains a div' do
     response = get('/')
 
-    expect(response.status).to include('<div>')
+    expect(response.body).to include('<div>')
   end
 end
 ```
@@ -109,9 +108,7 @@ Test-drive and update the `GET /hello` route so it returns the greeting message 
 </html>
 ```
 
-_(Don't forget to run the app using `rackup`)._
-
-Use your web browser to access the page.
+Then, make sure your server is running using `rackup` and use your web browser to access the page.
 
 
 [Next Challenge](02_using_erb_dynamic_page.md)

@@ -7,6 +7,16 @@ In this module you will learn to:
   * Follow a debugging process for a web applications
   * Deploy the web application using a straightforward cloud/PaaS service, such as Heroku.
 
+## Sequence
+
+Work through each of these exercises in sequence.
+
+This module is designed to be worked on during a week. Here's a suggested pace — you might find you need more (or less) time than this to complete the challenges, and that's OK.
+ * Day 1: HTTP
+ * Days 2 & 3: Sinatra Challenges.
+ * Days 4 & 5: HTML & ERB
+ * Solo challenge at the end of the week.
+
 ## Phase One: HTTP
 
 Go through these exercises and learn about the HTTP protocol and the Request and Response flow between a client and a server.
@@ -36,8 +46,8 @@ Reference material:
 1. [Using HTML to return browser-friendly content.](./html_bites/01_page_structure.md)
 2. [Using ERB to generate dynamic HTML.](./html_bites/02_using_erb_dynamic_page.md)
 3. [Using links to send `GET` requests.](./html_bites/03_using_links.md) 📡
-4. [Using the browser's developer console](./html_bites/04_the_developer_console.md)
-5. [Using forms to send `POST` requests.](./html_bites/05_using_forms.md) 
+4. [Using forms to send `POST` requests.](./html_bites/04_using_forms.md) 
+5. [Use the browser developer console.](./html_bites/05_the_developer_console.md) 
 
 ## Phase Four: Solo challenge
 

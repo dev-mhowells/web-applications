@@ -11,21 +11,23 @@ Learn to send HTTP requests to a web server with `curl`.
 ## Request
 
 An HTTP request is essentially defined by:
-  * its **method** (also sometimes called "verb")
+  * its **method** (also called "verb")
   * its **path** - is all that follows the first `/` of the URL.
   * its **parameters** (or request data)
 
-A web server only responds to a list of requests with specific methods and paths. The developer of the web server application needs to explicitly configure this in their application code — you will learn how to do this later.
+A web server only responds to a list of requests with specific methods and paths. The developer of the web server program needs to explicitly configure this in their code.
 
-If the server is not configured to handle a request with a given method and path, it will usually return an error indicating this request cannot be answered.
+If the web server is not configured to handle a request with a given method and path, it will usually return an error indicating this request cannot be handled.
 
-Once the server receives (or "handles") the request, it does some work (and usually interacts with the database), and sends back a response.
+Once the server receives the request, it does some work (and usually interacts with the database), and sends back a response.
 
 ## Response
 
-An HTTP response is essentially defined by:
-  * its **status code** indicating the result of the operation
+The HTTP response sent back to the client is essentially defined by:
+  * its **status code** indicating the result of the operation (status or failure).
   * its **body** (or content)
+
+The web server decides which status code to assign to the response, as a way of communicating to the client whether everything is fine (`200` - "OK"), or if something wrong happened. [A lot of different status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) exist for different situations. A famous one you probably already know of is `404` ("Not Found"), used by the server to indicate that the server cannot respond to a request.
 
 ## Using `curl`
 
@@ -33,22 +35,25 @@ By default, `curl` sends a request with a `GET` method. We can use the `-X` opti
 
 ```bash
 # Sends a request with a POST method.
+
 curl -X POST https://jsonplaceholder.typicode.com/todos/1
 ```
 
-In the example above, the **path** of the request is `/todos/1`.
-
-The first part of the URL, `https://jsonplaceholder.typicode.com`, is called the host. It is the address of the server itself. Everything that follows the hostname after the `/` character will be the path of the request.
+Here's a breakdown of the request sent by the command above:
+  * The first part of the URL, `https://jsonplaceholder.typicode.com`, is called the **host**. It is the address of the server itself
+  * the **path** of the request is `/todos/1`
+  * the **method** is `POST` 
 
 ## Demonstration
 
 @TODO
 
-## Exercise One
+## Exercise
 
-Use `curl` to send a request to the host `https://jsonplaceholder.typicode.com` with:
-  * a `GET` method
-  * a path `/todos/12`
+Use `curl` to send the following HTTP request:
+  * Host: `https://jsonplaceholder.typicode.com`
+  * Method: `GET`
+  * Path: `/todos/12`
 
 You should get the following response body:
 ```
@@ -60,21 +65,14 @@ You should get the following response body:
 }
 ```
 
-## Exercise Two
-
-Create a small diagram of the HTTP request-response cycle from the example above.
-
-Make sure your diagram contains the following things:
-  * the client
-  * the server
-  * the direction of the request and response
-  * the method and path of the request
+<!-- OMITTED -->
 
 ## Challenge
 
-Use `curl` to send a request to the host `https://jsonplaceholder.typicode.com` with:
-  * a `POST` method
-  * a path `/todos`
+Use `curl` to send the following HTTP request:
+  * Host: `https://jsonplaceholder.typicode.com`
+  * Method: `POST`
+  * Path: `/todos`
 
 You should get the following response body:
 ```

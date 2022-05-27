@@ -5,21 +5,23 @@ Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
 
 Learn to test-drive Sinatra routes which interact with database-backed classes.
 
+<!-- OMITTED -->
+
 _This section connects together what you've learned working with databases with what you've learned building web applications. It can be quite challenging, so make sure you spend some time to understand the following._
 
 ## Intro
 
-So far you've mostly designed routes that return static data. A realistic web server will usually connect to a database, to read data from it (usually responding to `GET` requests), or write some data into it (usually responding to `POST` requests).
+So far you've mostly designed routes that return static data. A realistic web server program will usually connect to a database, to read data from it (usually responding to `GET` requests), or write some data into it (usually responding to `POST` requests).
 
 In the next challenges, you'll learn how to use a database-backed Repository class inside your Sinatra application. Here's a simplified schema of how a typical database-backed web application works:
 
 ![](../resources/http-database-flow.png)
 
-Let's break it down:
-1. The client sends a HTTP request to the web server over the Internet (e.g `GET /albums`)
-2. The web server (a Sinatra application, in our case) handles the request, and executes the route block which calls a method (such as `AlbumRepository#all`)
-3. The Repository class performs a SQL query to the database.
-4. The database returns a result set to the program, containing records.
+Let's break down an example:
+1. The client sends a HTTP request to the web server over the Internet: `GET /albums`
+2. The web server (a Sinatra application, in our case) handles the request, and executes the route block, which calls the method `AlbumRepository#all`
+3. The Repository class runs a SQL query to the database.
+4. The database returns a result set to the program.
 5. The Repository class returns a list of `Album` objects to the route block.
 6. The route block sends a response to the client containing the data.
 
@@ -58,6 +60,8 @@ Response: None (just deletes the resource on the server)
 ```
 
 In this case, _we say the Albums collection is a "Resource"_ —  we can execute CRUD operations (Create, Read, Update, Delete) on a given Resource, by sending HTTP requests to the right method and path.
+
+You've noticed the mapping above uses other HTTP methods, such as `PATCH` and `DELETE`. They work the same way as `POST`, and we can send query parameters and body parameters with them too.
 
 This pattern of routing is often called **REST**. The key idea behind **REST** is to map HTTP request (method and path) to CRUD operations on the underlying database, as in the example above.
 
@@ -120,14 +124,22 @@ curl http://localhost:9292/albums
 
 ## Exercise
 
-Use the Design recipe to test-drive a route `POST /albums` to create a new album. The HTTP request sent to this route should contain three body parameters for:
-  * the `title` of the new album
-  * the `release_year` of the new album
-  * the `artist_id` of the new album
+Follow the [Design recipe](../resources/sinatra_route_design_recipe_template.md) to test-drive a route `POST /albums` to create a new album:
 
-You should call the method `AlbumRepository#create` in the route block.
+```
+# Request:
+POST /albums
 
-You should be able to verify your work by sending a request to this route, and verifying the record is correctly saved in the database.
+# With body parameters:
+title=Voyage
+release_year=2022
+artist_id=2
+
+# Expected response (201 Created)
+(No content)
+```
+
+Your test should assert that the new album is present in the list of records returned by `GET /albums`.
 
 ## Challenge
 
@@ -151,7 +163,20 @@ Nina Simone
 
 2. Test-drive a route `POST /artists`, which creates a new artist in the database. Your test should verify the new artist is present in the database (by using the Repository class to access it).
 
+```
+# Request:
+POST /artists
+
+# With body parameters:
+name=Wild nothing
+genre=Indie
+
+# Expected response (201 Created)
+(No content)
+```
+
 [After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as02).
+
 
 [Next Challenge](05_deploying.md)
 

@@ -3,18 +3,22 @@
 _**This is a Makers Vine.** Vines are designed to gradually build up sophisticated skills. They contain a mixture of text and video, and may contain some challenge exercises without proposed solutions. [Read more about how to use Makers
 Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
 
-Learn to build a "route" to respond to HTTP requests.
+Learn to build a route to respond to HTTP requests.
+
+<!-- OMITTED -->
 
 ## Routing
 
-Remember that a web server receives HTTP requests, execute some code depending on the received request, and returns a response. To know which code to execute depending on the request, internally Sinatra keeps a "routing" table, which associates a request **method and path** to a block of Ruby code:
+Remember that a web server receives HTTP requests, execute some code depending on the received request, and returns a response.
+
+To decide on what code to execute depending on the request, internally Sinatra keeps a "routing" table, which associates a given request **method and path** to a block of Ruby code:
 
 |Method|Path|Ruby code|
 |-|-|-|
 |GET|/|`# some code to execute`
-|POST|/|`# other code to execute`
+|POST|/|`# some different code to execute`
 
-For example, receiving a `GET` request on the path `/hello` will execute some code. Receiving a different `POST` request on the same path (or perhaps a different one) will execute different code (and in turn lead to a different returned response).  
+Different requests will execute different code in our Sinatra application, and lead to different responses being sent back.
 
 Here is an example of a minimal Sinatra application, configuring a single **route**:
 
@@ -40,7 +44,7 @@ class WebApplication < Sinatra::Base
 end
 ```
 
-The Ruby block between the `do` and `end` associated with a route is called a "route" or "route block". The code in this block is executed _only_ is the received request matches the method and path.
+The Ruby block between the `do` and `end` associated with a method and path is called a "route" or "route block". The code in this block is executed _only_ is the received request matches the method and path.
 
 When Sinatra received a request, it looks through all the route blocks configured in that class, and execute the code of the first one matching the request.
 
@@ -49,24 +53,21 @@ When Sinatra received a request, it looks through all the route blocks configure
 # GET /
 
 class WebApplication < Sinatra::Base 
-  # This route is not executed (the method doesn't match).
   post '/' do
-
+    # This route is not executed (the method doesn't match).
   end
 
-  # This route is not executed (the path doesn't match).
   get '/hello' do
-    
+    # This route is not executed (the path doesn't match).    
   end
 
-  # This route matches! The code inside the block will be executed now.
   get '/' do
-
+    # This route matches! The code inside the block will be executed now.
   end
 
-  # This route matches, but is not executed - only the first one matching (above) is.
   get '/' do
-
+    # This route matches too, but will not be executed.
+    # Only the first one matching (above) is.
   end
 end
 ```
@@ -94,6 +95,20 @@ end
 
 We can also use `params` to retrieve _body parameters_ sent with `POST` request — it works exactly the same way.
 
+```ruby
+# Request:
+# POST /hello
+#   With body parameter: name=Alice
+
+post '/hello' do
+  name = params[:name] # The value is 'Alice'
+
+  # Do something with `name`...
+
+  return "Hello #{name}"
+end
+```
+
 ## Demonstration
 
 @TODO
@@ -102,9 +117,11 @@ We can also use `params` to retrieve _body parameters_ sent with `POST` request 
 
 Work through the following in the project `hello_web_project`.
 
-Create a new route that responds to `GET` requests sent to the path `/hello`. It should return the text `'Hello [NAME]'`, where `[NAME]` is replaced by the value of the `name` _query parameter_.
-
-Using Postman, send a request to the correct URL, by adding a query parameter `name` with your own name, and check the received response is correct.
+Create a new route that responds to requests sent with:
+  * A method `GET`
+  * A path `/hello`
+  
+It should return the text `'Hello [NAME]'`, where `[NAME]` is replaced by the value of the `name` _query parameter_.
 
 ```
 # Request:
@@ -114,17 +131,17 @@ GET /hello?name=Leo
 Hello Leo
 ```
 
+Make sure your server is running - then, using Postman, check the route is working.
+
 ## Challenge
 
 Work through the following in the project `hello_web_project`.
 
-Create a new route that responds to `POST` requests sent to the path `/submit`.
+Create a new route that responds to requests sent with:
+  * A method `POST`
+  * A path `/submit`
 
-It should return the text `'Thanks [NAME], you sent this message: "[MESSAGE]"'`, where:
-  * `[NAME]` is replaced by the value of the `name` _body parameter_
-  * `[MESSAGE]` is replaced by the value of the `message` _body parameter_
-
-Using Postman, send a request to the correct URL, by adding _body parameters_ `name` and `message`, and check the received response is correct.
+Here's the expected behaviour of this route:
 
 ```
 # Request:
@@ -137,6 +154,9 @@ message=Hello world
 # Expected response (2OO OK):
 Thanks Leo, you sent this message: "Hello world"
 ```
+
+Make sure your server is running - then, using Postman, check the route is working.
+
 
 [Next Challenge](03_test_driving_a_route.md)
 

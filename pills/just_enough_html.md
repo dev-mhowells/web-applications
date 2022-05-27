@@ -93,6 +93,8 @@ When a user submits a form, the browser will send a `POST` request to the given 
 <form action="/submit" method="POST">
   <input type="text" name="title">
   <input type="text" name="release_date">
+
+  <input type="submit" value="Submit the form">
 </form>
 ```
 

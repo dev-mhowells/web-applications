@@ -66,9 +66,7 @@ We'll use [this Design recipe](../resources/sinatra_route_design_recipe_template
 
 _Work in the same project directory `hello_web_project` for the following exercises._
 
-Use the Design recipe to test-drive a new route `GET /names` which returns the text content `'Julia, Mary, Karim'`.
-
-You should assert that the response status code is `200` and that the response body is the correct string.
+Use the Design recipe to test-drive the following route:
 
 ```
 # Request:
@@ -78,15 +76,17 @@ GET /names
 Julia, Mary, Karim
 ```
 
+You should assert that the response status code is `200` and that the response body is the correct string.
+
 ## Challenge
 
 This is a process feedback challenge. That means you should record yourself doing it and
 submit that recording to your coach for feedback. [How do I do
 this?](https://github.com/makersacademy/golden-square/blob/main/pills/process_feedback_challenges.md)
 
-Test-drive a new route `POST /sort-names` which:
-  * receives a body parameter `names`, which is a comma-separated list of names.
-  * returns the same list of names, but sorted in alphabetical order, in the response.
+Test-drive a new route `POST /sort-names` which receives a list of names (as a comma-separated string) and return the same list, sorted in alphabetical order.
+
+Here's a description of the expected behaviour:
 
 ```
 # Request:
@@ -95,7 +95,7 @@ POST http://localhost:9292/sort-names
 # With body parameters:
 names=Joe,Alice,Zoe,Julia,Kieran
 
-# Expected response:
+# Expected response (sorted list of names):
 Alice,Joe,Julia,Kieran,Zoe
 ```
 
