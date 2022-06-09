@@ -161,7 +161,7 @@ Taylor Swift
 Nina Simone
 ```
 
-2. Test-drive a route `POST /artists`, which creates a new artist in the database. Your test should verify the new artist is present in the database (by using the Repository class to access it).
+2. Test-drive a route `POST /artists`, which creates a new artist in the database. Your test should verify the new artist is returned in the response of `GET /artists`.
 
 ```
 # Request:
@@ -177,8 +177,6 @@ genre=Indie
 
 [After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as02).
 
-
-[Next Challenge](05_deploying.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

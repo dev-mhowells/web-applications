@@ -23,7 +23,7 @@ I want to create a user account
 
 As a Maker
 So my account can be secured
-I want to have my username and password stored in my user account
+I want to have my username and password securely stored in my user account
 ```
 
 Then, these harder ones:
@@ -45,6 +45,14 @@ As a Maker
 So that I can stay constantly tapped in to the shouty box of Chitter
 I want to receive an email if I am tagged in a Peep
 ```
+
+## Notes on functionality:
+
+ * You don't have to be logged in to see the peeps.
+ * You can use the `bcrypt` gem to encrypt passwords in the database.
+ * Users sign up to Chitter with their email, password, name and a username (e.g. `samm@makersacademy.com`, `password123`, Sam Morgan, `sjmog`).
+ * The username and email are unique.
+ * Peeps (posts to Chitter) have the name of the user and their user handle.
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

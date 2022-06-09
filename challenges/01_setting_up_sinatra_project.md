@@ -9,11 +9,15 @@ Learn to setup a Ruby project with the Sinatra library.
 
 ## Sinatra
 
-Sinatra is a small Ruby library we use to create web server programs using Ruby. We use Sinatra to configure which requests our program can respond to, and what logic needs to be done to respond to those requests.
+[Sinatra](http://sinatrarb.com/intro.html) is a small Ruby library we use to create web server programs using Ruby. We use Sinatra to configure which requests our program can respond to, and what logic needs to be done to respond to those requests.
 
 In the following exercises and challenges, you will learn how to build a web server program that receives HTTP requests from a client (such as Postman), and returns HTTP responses to it.
 
-## Exercise
+## Demonstration
+
+[Video demonstration](https://www.youtube.com/watch?v=1j0PS6e0CZk)
+
+## Setting up
 
 [Follow this guidance](../pills/setting_up_sinatra_project.md) to setup a new project directory `hello_web_project` with RSpec and Sinatra.
 
@@ -46,10 +50,6 @@ Something to be mindful of: in real-word programs, the web server program will u
 In the following challenges, you will _build_ such web server programs, which means that while you're building it, it will run on your machine. This is called working "locally", on a "local server", or "local setup", as opposed to the program being deployed in production, to real users.
 
 It's therefore important not to forget this: **the web server programs you will build this week are meant, in the end, to be run on remote machines, and interacted with through HTTP requests and responses**. Later on in this module, you will learn how to deploy your web server on a remote machine, which is closer to how things work in the "real world".
-
-## Demonstration
-
-[Video demonstration](https://www.youtube.com/watch?v=1j0PS6e0CZk)
 
 [Next Challenge](02_building_a_route.md)
 
