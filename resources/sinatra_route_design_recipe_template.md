@@ -5,15 +5,10 @@ _Copy this design recipe template to test-drive a Sinatra route._
 ## 1. Design the Route Signature
 
 You'll need to include:
-  * the **HTTP method**
-  * the **path**
-  * any **query parameters** (passed in the URL) or **body parameters** (passed in the request body)
-
-_Fill the table below with your own design._
-
-|What does it do?|Method|Path|Query parameters?|Body parameters?|
-|--|--|--|--|--|
-|Gets a single post by its ID|`GET`|`/posts?id=1`|`id`|-|
+  * the HTTP method
+  * the path
+  * any query parameters (passed in the URL)
+  * or body parameters (passed in the request body)
 
 ## 2. Design the Response
 

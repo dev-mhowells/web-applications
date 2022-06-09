@@ -1,6 +1,6 @@
 # Setting up a Sinatra project
 
-**@TODO A video demonstration is here. If you follow this directly, make sure you create a new directory and run the commands in that directory.**
+[A video demonstration is here.](https://www.youtube.com/watch?v=1j0PS6e0CZk).
 
 Learn to setup a Ruby project using Sinatra.
 

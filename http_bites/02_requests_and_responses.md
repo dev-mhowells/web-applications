@@ -46,7 +46,7 @@ Here's a breakdown of the request sent by the command above:
 
 ## Demonstration
 
-@TODO
+[Video demonstration](https://www.youtube.com/watch?v=KBLWw-0HbpU&t=646s)
 
 ## Exercise
 

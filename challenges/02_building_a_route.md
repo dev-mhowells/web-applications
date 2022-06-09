@@ -26,7 +26,7 @@ Here is an example of a minimal Sinatra application, configuring a single **rout
 # file: app.rb
 require 'sinatra/base'
 
-class WebApplication < Sinatra::Base 
+class Application < Sinatra::Base 
 
   # Declares a route that responds to a request with:
   #  - a GET method
@@ -111,7 +111,7 @@ end
 
 ## Demonstration
 
-@TODO
+[Video demonstration](https://www.youtube.com/watch?v=iCMsemJVbqo)
 
 ## Exercise
 
@@ -132,6 +132,8 @@ Hello Leo
 ```
 
 Make sure your server is running - then, using Postman, check the route is working.
+
+[Solution](https://www.youtube.com/watch?v=iCMsemJVbqo&t=1106s)
 
 ## Challenge
 

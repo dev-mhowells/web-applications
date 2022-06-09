@@ -60,7 +60,7 @@ We'll use [this Design recipe](../resources/sinatra_route_design_recipe_template
 
 ## Demonstration
 
-@TODO
+[Video demonstration](https://www.youtube.com/watch?v=NwKBtzkZrJo)
 
 ## Exercise
 

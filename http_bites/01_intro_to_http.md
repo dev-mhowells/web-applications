@@ -8,9 +8,9 @@ Bites.](https://github.com/makersacademy/course/blob/main/labels/bites.md)_
 
 Learn to explain the basics of how the HTTP protocol works.
 
-## Introduction Video
+## Introduction
 
-@TODO
+[Here's an introduction video.](https://www.youtube.com/watch?v=KBLWw-0HbpU)
 
 ## Clients and Servers
 

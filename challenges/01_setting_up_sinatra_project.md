@@ -15,7 +15,7 @@ In the following exercises and challenges, you will learn how to build a web ser
 
 ## Exercise
 
-[Follow this guidance](../pills/setting_up_sinatra_project.ed.md) to setup a new project directory `hello_web_project` with RSpec and Sinatra.
+[Follow this guidance](../pills/setting_up_sinatra_project.md) to setup a new project directory `hello_web_project` with RSpec and Sinatra.
 
 We've got two different ways to interact with the program:
   * By running RSpec tests that will simulate HTTP requests and assert on responses.
@@ -49,7 +49,7 @@ It's therefore important not to forget this: **the web server programs you will 
 
 ## Demonstration
 
-@TODO
+[Video demonstration](https://www.youtube.com/watch?v=1j0PS6e0CZk)
 
 [Next Challenge](02_building_a_route.md)
 
