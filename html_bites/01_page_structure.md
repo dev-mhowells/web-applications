@@ -14,18 +14,16 @@ Web browsers are clients. When a web browser sends a request and receives a resp
 If that response contains HTML code, that code is interpreted and transformed into a user-friendly web page.
 
 Whenever you visit a website using your web browser, the following happens behind the scenes:
-  * the web browser sends a `GET` request to the server.
-  * the web browser receives the response.
-  * the web browser interprets the HTML code to know what to display.
-  * the web browser shows a graphical web page (with text, images, buttons, etc) to the user.
+  1. the web browser sends a `GET` request to the server.
+  2. the web browser receives the response.
+  3. the web browser interprets the HTML code to know what to display.
+  4. the web browser shows a graphical web page (with text, images, buttons, etc) to the user.
 
-It's important to note that this process happens **again for every new page**.
-
-If we reload the page, the same process happens. If we visit a different page, the same process happens.
+It's important to note that this process happens **again for every new page**. If we reload the page, the same process happens. If we visit a different page, the same process happens.
 
 Every time we visit a URL, the web browser acts as a client — it sends a `GET` request to this URL and path, gets the response, and interprets the HTML as a user-friendly web page. It is really important that you keep this in mind when building, using and debugging your web applications, to have a good idea of what is happening.
 
-[Use this HTML reference material](../pills/just_enough_html.md) for the following challenges.
+[Use this guidance as HTML reference material](../pills/just_enough_html.md) for the following challenges.
 
 ## Returning HTML
 

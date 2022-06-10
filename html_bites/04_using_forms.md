@@ -96,7 +96,7 @@ In the project `music_library_exemplar`.
 Test-drive and implement a form page to add a new artist.
 
 
-[Next Challenge](05_using_sessions.md)
+[Next Challenge](05_deploying.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

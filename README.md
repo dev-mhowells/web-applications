@@ -38,21 +38,22 @@ Some of these challenges include [Process Feedback Challenges](https://github.co
 
 ## Phase Three: HTML & ERB
 
-Reference material:
-  * [Just enough HTML](./pills/just_enough_html.md)
-  * [Just enough ERB syntax](./pills/just_enough_erb.md)
-  * [Use the browser developer console.](./pills/use_the_developer_console.md) 
-
 1. [Using HTML to return browser-friendly content.](./html_bites/01_page_structure.md)
 2. [Using ERB to generate dynamic HTML.](./html_bites/02_using_erb_dynamic_page.md)
 3. [Using links to send `GET` requests.](./html_bites/03_using_links.md) 📡
 4. [Using forms to send `POST` requests.](./html_bites/04_using_forms.md) 
-5. [Creating and authenticating users](./html_bites/05_using_sessions.md)
-6. [Deploying your web server](./challenges/06_deploying.md)
+5. [Deploying your web server](./challenges/05_deploying.md)
 
 ## Phase Four: Solo challenge
 
 [Chitter challenge](./projects/chitter.md)
+
+## Going further
+
+This is additional reference material so you can learn to use common features and patterns implemented as part of web applications.
+
+1. [Creating and authenticating users](./pills/user_authentication.ed.md)
+2. [Loading CSS or static files](./pills/loading_css_or_static_files.ed.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

@@ -1,9 +1,10 @@
 # Creating and authenticating users
 
-_**This is a Makers Vine.** Vines are designed to gradually build up sophisticated skills.
-They contain a mixture of text and video, and may contain some challenge exercises without
-proposed solutions. [Read more about how to use Makers
-Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
+_**This is a Makers Bite.** Bites are designed to train specific skills or
+tools. They contain an intro, a demonstration video, some exercises with an
+example solution video, and a challenge without a solution video for you to test
+your learning. [Read more about how to use Makers
+Bites.](https://github.com/makersacademy/course/blob/main/labels/bites.md)_
 
 Learn to authenticate users with the database and sessions.
 
@@ -137,26 +138,26 @@ class Application < Sinatra::Base
 end
 ```
 
-## Challenge
+## Exercise (without a database)
 
-In the project `music_library_exemplar`.
+In a new web project:
 
 Create a new login form by test-driving two routes:
-  * The first route `GET /login` simply returns the login form.
-  * The second route `POST /login` receives credentials (email and password), and should
-    sign-in the user by storing information in the session.
+  * The first route `GET /login` simply returns the login form page.
+  * The second route `POST /login` receives credentials (email and password), should then verify the password is equal to `s3cretp4ss`, and if it is, store a new variable in session to indicate the user is logged in.
 
-You should then make sure that the form pages to add a new album or a new artist are
-protected, and only accessible to a signed-in user.
+You can also create an index page at `GET /` which returns a page indicating whether the user is logged in or not.
 
-[Next Challenge](06_deploying.md)
+## Exercise (with a database)
+
+Work through the same exercise as above, but this time, use the database to store user accounts. You should also use a Repository class to find and authenticate the user against the password submitted via the login form.
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=html_bites/05_using_sessions.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=html_bites/05_using_sessions.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=html_bites/05_using_sessions.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=html_bites/05_using_sessions.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=html_bites/05_using_sessions.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=pills/user_authentication.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=pills/user_authentication.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=pills/user_authentication.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=pills/user_authentication.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=pills/user_authentication.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

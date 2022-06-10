@@ -47,7 +47,7 @@ The value of the instance variable is then accessible in the `view` file:
 </html>
 ```
 
-[Use this as reference material on ERB syntax](../pills/just_enough_erb.md) for the following challenges.
+[Use this guidance as reference material on ERB syntax](../pills/just_enough_erb.md) for the following challenges.
 
 ## Demonstration
 
@@ -68,6 +68,19 @@ Test-drive and implement a `GET /albums/:id` route so it returns the HTML conten
     <h1>Doolittle</h1>
     <p>
       Release year: 1989
+      Artist: Pixies
+    </p>
+  </body>
+</html>
+
+<!-- Example for GET /albums/2 -->
+
+<html>
+  <head></head>
+  <body>
+    <h1>Surfer Rosa</h1>
+    <p>
+      Release year: 1988
       Artist: Pixies
     </p>
   </body>
