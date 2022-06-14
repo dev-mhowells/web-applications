@@ -83,7 +83,7 @@ end
 
 ## Exercise
 
-In the project `music_library_exemplar`.
+In the project `music_library_database_app`.
 
 Test-drive and implement a form page to add a new album.
 
@@ -91,7 +91,7 @@ You should then be able to use the form in your web browser to add a new album, 
 
 ## Challenge
 
-In the project `music_library_exemplar`.
+In the project `music_library_database_app`.
 
 Test-drive and implement a form page to add a new artist.
 

@@ -25,8 +25,14 @@ Here is an example of a minimal Sinatra application, configuring a single **rout
 ```ruby
 # file: app.rb
 require 'sinatra/base'
+require 'sinatra/reloader'
 
-class Application < Sinatra::Base 
+class Application < Sinatra::Base
+  # This allows the app code to refresh
+  # without having to restart the server.
+  configure :development do
+    register Sinatra::Reloader
+  end
 
   # Declares a route that responds to a request with:
   #  - a GET method
@@ -52,7 +58,9 @@ When Sinatra received a request, it looks through all the route blocks configure
 # Example when Sinatra receives a request
 # GET /
 
-class WebApplication < Sinatra::Base 
+class Application < Sinatra::Base 
+  # ...
+
   post '/' do
     # This route is not executed (the method doesn't match).
   end

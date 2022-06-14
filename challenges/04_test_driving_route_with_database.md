@@ -1,4 +1,4 @@
-# Interacting with the Database
+# Test-driving CRUD routes
 
 _**This is a Makers Vine.** Vines are designed to gradually build up sophisticated skills. They contain a mixture of text and video, and may contain some challenge exercises without proposed solutions. [Read more about how to use Makers
 Vines.](https://github.com/makersacademy/course/blob/main/labels/vines.md)_
@@ -71,7 +71,7 @@ You might have noticed the route pattern `/albums/1` from the previous mapping â
 
 ```
 GET /albums/1   -> get album with ID 1
-GET /albums/5   -> get album with ID 1
+GET /albums/5   -> get album with ID 5
 GET /albums/12   -> get album with ID 12
 ```
 
@@ -99,28 +99,25 @@ end
 
 ## Downloading the program
 
-[Use this provided codebase as a starting point.](../resources/music_library_exemplar/) It contains a program that interacts with a database containing a few music albums.
+[Use this provided codebase as a starting point.](../resources/music_library_database_app/) It contains a program that interacts with a database containing a few music albums.
 
 Create a database `music_library` and setup the program.
 
 ```ruby
-cd music_library_exemplar
+cd music_library_database_app
 
 bundle install
 
 # Make sure the tests pass
 rspec
 
-# Run the app
+# Run the web server
 rackup
-
-# This should return a list of album titles
-curl http://localhost:9292/albums
 ```
 
 ## Demonstration
 
-@TODO
+[Video Demonstration](https://www.youtube.com/watch?v=WD5aURdrDN4)
 
 ## Exercise
 
@@ -135,11 +132,13 @@ title=Voyage
 release_year=2022
 artist_id=2
 
-# Expected response (201 Created)
+# Expected response (200 OK)
 (No content)
 ```
 
 Your test should assert that the new album is present in the list of records returned by `GET /albums`.
+
+[Example solution](https://www.youtube.com/watch?v=WD5aURdrDN4&t=1135s)
 
 ## Challenge
 
@@ -154,11 +153,8 @@ Work in the same project directory.
 # Request:
 GET /artists
 
-# Response:
-Pixies
-ABBA
-Taylor Swift
-Nina Simone
+# Expected response (200 OK)
+Pixies, ABBA, Taylor Swift, Nina Simone
 ```
 
 2. Test-drive a route `POST /artists`, which creates a new artist in the database. Your test should verify the new artist is returned in the response of `GET /artists`.
@@ -171,8 +167,14 @@ POST /artists
 name=Wild nothing
 genre=Indie
 
-# Expected response (201 Created)
+# Expected response (200 OK)
 (No content)
+
+# Then subsequent request:
+GET /artists
+
+# Expected response (200 OK)
+Pixies, ABBA, Taylor Swift, Nina Simone, Wild nothing
 ```
 
 [After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as02).

@@ -1,5 +1,4 @@
 DROP TABLE IF EXISTS albums; 
-DROP TABLE IF EXISTS artists; 
 
 -- Table Definition
 CREATE TABLE albums (
@@ -9,15 +8,7 @@ CREATE TABLE albums (
     artist_id int4
 );
 
--- Table Definition
-CREATE TABLE artists (
-    id SERIAL PRIMARY KEY,
-    name text,
-    genre text
-);
-
-TRUNCATE TABLE albums;
-TRUNCATE TABLE artists;
+TRUNCATE TABLE albums RESTART IDENTITY;
 
 INSERT INTO albums ("title", "release_year", "artist_id") VALUES
 ('Doolittle', 1989, 1),
@@ -33,9 +24,4 @@ INSERT INTO albums ("title", "release_year", "artist_id") VALUES
 ( 'Fodder on My Wings', 1982, 4),
 ( 'Ring Ring', 1973, 2);
 
-INSERT INTO artists ("name", "genre") VALUES
-('Pixies', 'Rock'),
-('ABBA', 'Pop'),
-('Taylor Swift', 'Pop'),
-('Nina Simone', 'Pop');
 

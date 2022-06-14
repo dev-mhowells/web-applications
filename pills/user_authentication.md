@@ -90,6 +90,9 @@ client they are using is sending many different requests to the server.
 
 ```ruby
 class Application < Sinatra::Base 
+  configure :development do
+    register Sinatra::Reloader
+  end
 
   # This route simply returns the login page
   get '/login' do

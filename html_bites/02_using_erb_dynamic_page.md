@@ -17,7 +17,10 @@ The following example shows how a variable `@name` can be used to change the vie
 # file: app.rb
 require 'sinatra/base'
 
-class WebApplication < Sinatra::Base 
+class Application < Sinatra::Base 
+  configure :development do
+    register Sinatra::Reloader
+  end
 
   get '/hello' do
     # Set an instance variable in the route block.
@@ -51,11 +54,11 @@ The value of the instance variable is then accessible in the `view` file:
 
 ## Demonstration
 
-@TODO
+[Video Demonstration](https://www.youtube.com/watch?v=R_8PnCQk1kw&t=710s)
 
 ## Exercise
 
-In the project `music_library_exemplar`.
+In the project `music_library_database_app`.
 
 Test-drive and implement a `GET /albums/:id` route so it returns the HTML content for a single album:
 
@@ -87,9 +90,11 @@ Test-drive and implement a `GET /albums/:id` route so it returns the HTML conten
 </html>
 ```
 
+[Example solution](https://www.youtube.com/watch?v=R_8PnCQk1kw&t=1560s)
+
 ## Challenge
 
-In the project `music_library_exemplar`.
+In the project `music_library_database_app`.
 
 Test-drive and update the `GET /albums` route so it returns the list of albums as an HTML page:
 

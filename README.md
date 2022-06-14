@@ -52,8 +52,10 @@ Some of these challenges include [Process Feedback Challenges](https://github.co
 
 This is additional reference material so you can learn to use common features and patterns implemented as part of web applications.
 
-1. [Creating and authenticating users](./pills/user_authentication.ed.md)
-2. [Loading CSS or static files](./pills/loading_css_or_static_files.ed.md)
+1. [Creating and authenticating users](./pills/user_authentication.md)
+2. [Loading CSS or static files](./pills/loading_css_or_static_files.md)
+3. [The MVC pattern]
+4. [Modelling a small web application]
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

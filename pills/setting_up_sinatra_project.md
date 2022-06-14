@@ -30,10 +30,15 @@ touch config.ru
 When building Sinatra web applications, this file will contain the application class. Create an empty one for now, you will define _routes_ later inside it (and learn about what a _route_ is).
 
 ```ruby
-require "sinatra/base"
+require 'sinatra/base'
+require 'sinatra/reloader'
 
 class Application < Sinatra::Base
-
+  # This allows the app code to refresh
+  # without having to restart the server.
+  configure :development do
+    register Sinatra::Reloader
+  end
 end
 ```
 

@@ -47,7 +47,7 @@ This is a process feedback challenge. That means you should record yourself doin
 submit that recording to your coach for feedback. [How do I do
 this?](https://github.com/makersacademy/golden-square/blob/main/pills/process_feedback_challenges.md)
 
-Test-drive and implement the following changes to the `music_library_exemplar` project:
+Test-drive and implement the following changes to the `music_library_database_app` project:
 1. The list of albums page returned by `GET /albums` should contain anchor links for each album listed.   
   Each anchor link should direct to `GET /album/{ID}` where `{ID}` needs to be the corresponding id.
 2. The route `GET /album/{ID}` should return an HTML page for a single album (using the id present in the request path).

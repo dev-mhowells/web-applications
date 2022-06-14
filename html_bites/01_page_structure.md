@@ -45,7 +45,10 @@ views/
 # file: app.rb
 require 'sinatra/base'
 
-class WebApplication < Sinatra::Base 
+class Application < Sinatra::Base 
+  configure :development do
+    register Sinatra::Reloader
+  end
 
   get '/' do
     # The erb method takes the view file name (as a Ruby symbol)
@@ -89,7 +92,7 @@ end
 
 ## Demonstration
 
-@TODO
+[Video Demonstration](https://www.youtube.com/watch?v=R_8PnCQk1kw)
 
 ## Exercise
 
