@@ -42,11 +42,12 @@ Some of these challenges include [Process Feedback Challenges](https://github.co
 2. [Using ERB to generate dynamic HTML.](./html_bites/02_using_erb_dynamic_page.md)
 3. [Using links to send `GET` requests.](./html_bites/03_using_links.md) 📡
 4. [Using forms to send `POST` requests.](./html_bites/04_using_forms.md) 
-5. [Deploying your web server](./challenges/05_deploying.md)
+5. [Debugging a web application](./html_bites/05_debugging.md)
+6. [Deploying your web server](./challenges/05_deploying.md)
 
 ## Phase Four: Solo challenge
 
-[Chitter challenge](./projects/chitter.md)
+[Work on the Chitter challenge](https://github.com/makersacademy/chitter-challenge) and open a pull request when you're done.
 
 ## Going further
 

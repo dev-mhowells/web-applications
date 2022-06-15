@@ -12,8 +12,6 @@ Let's consider the following situation. We have two routes:
   * `GET /about` is another route, returning some different HTML — it's a different page.
 
 The web browser can send requests to these two routes separately.
-  * If we were to enter directly in the URL bar `http://localhost:9292`, the browser would send a request to the first route, and the browser would receive and show the homepage.
-  * If we were to enter directly in the URL bar `http://localhost:9292/about`, the browser would send a request to the second route, and the browser would receive and show that other page.
 
 However, when building websites, we don't want users to manually enter a new URL every time they need to go to a different page. We need a way to "tell" the browser when to send a new request to a different page.
 
@@ -35,11 +33,17 @@ When creating links between "pages", keep the developer tools open in the browse
 
 ## Demonstration
 
-@TODO
+[Video Demonstration](https://www.youtube.com/watch?v=QwqPrxRqWu8)
 
 ## Exercise
 
-@TODO
+Test-drive and implement the following change to the `music_library_database_app` project:
+
+The page returned by `GET /albums` should contain a link for each album listed. It should link to `/albums/:id`, where `:id` is the corresponding album's id.
+
+Run the server and make sure you can navigate, using your browser, from the albums list page to the single album page.
+
+[Example solution](https://youtu.be/QwqPrxRqWu8?t=625)
 
 ## Challenge
 
@@ -48,9 +52,9 @@ submit that recording to your coach for feedback. [How do I do
 this?](https://github.com/makersacademy/golden-square/blob/main/pills/process_feedback_challenges.md)
 
 Test-drive and implement the following changes to the `music_library_database_app` project:
-1. The list of albums page returned by `GET /albums` should contain anchor links for each album listed.   
-  Each anchor link should direct to `GET /album/{ID}` where `{ID}` needs to be the corresponding id.
-2. The route `GET /album/{ID}` should return an HTML page for a single album (using the id present in the request path).
+1. Add a route `GET /artists/:id` which returns an HTML page showing details for a single artist.
+2. Add a route `GET /artists` which returns an HTML page with the list of artists. This page should contain a link for each artist listed, linking to `/artist/:id` where `:id` needs to be the corresponding album id.
+
 
 [After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as03).
 
