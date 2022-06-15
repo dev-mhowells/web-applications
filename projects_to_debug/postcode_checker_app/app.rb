@@ -5,7 +5,7 @@ require './lib/postcode_checker'
 class Application < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
-    also_reload 'lib/postcode_cheker.rb'
+    also_reload 'lib/postcode_checker.rb'
   end
 
   get '/' do

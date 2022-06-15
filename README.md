@@ -1,11 +1,14 @@
 # Web applications
 
+_Coaching this? Read the coach guidance
+[here.](https://github.com/makersacademy/slug/blob/main/materials/universe/databases_web_applications/web_applications/HOW_TO_COACH.x.md)_
+
 In this module you will learn to:
   * Explain how HTTP requests and responses work at a high level
   * Write integration tests for a web application
   * Implement web HTTP endpoints using a lightweight web framework
   * Follow a debugging process for a web applications
-  * Deploy the web application using a straightforward cloud/PaaS service, such as Heroku.
+  * Deploy a web application using a light cloud service such as Heroku.
 
 ## Sequence
 
