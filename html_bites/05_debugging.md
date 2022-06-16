@@ -49,7 +49,7 @@ rspec
 rackup 
 ```
 
-[Next Challenge](06_deploying.md)
+[Next Challenge](06_securing_user_input.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
