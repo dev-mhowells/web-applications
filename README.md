@@ -48,12 +48,12 @@ feedback. These are tagged with a 📡.
 
 ## Phase Three: Building webpages
 
-1. [Using HTML to create webpages.](./html_bites/01_page_structure.md)
-2. [Using ERB to return dynamic HTML.](./html_bites/02_using_erb_dynamic_page.md)
-3. [Using links to send `GET` requests.](./html_bites/03_using_links.md) 📡
-4. [Using forms to send `POST` requests.](./html_bites/04_using_forms.md) 
-5. [Debugging a web application](./html_bites/05_debugging.md)
-6. [Securing your application](./html_bites/06_securing_user_input.md)
+1. [Using HTML to create webpages.](./html_challenges/01_page_structure.md)
+2. [Using ERB to return dynamic HTML.](./html_challenges/02_using_erb_dynamic_page.md)
+3. [Using links to send `GET` requests.](./html_challenges/03_using_links.md) 📡
+4. [Using forms to send `POST` requests.](./html_challenges/04_using_forms.md) 
+5. [Debugging a web application](./html_challenges/05_debugging.md)
+6. [Securing your application](./html_challenges/06_securing_user_input.md)
 6. [Deploying your web server](./challenges/07_deploying.md)
 
 ## Phase Four: Solo challenge
@@ -68,8 +68,6 @@ implemented as part of web applications.
 
 1. [Creating and authenticating users](./pills/user_authentication.md)
 2. [Loading CSS or static files](./pills/loading_css_or_static_files.md)
-3. [The MVC pattern]
-4. [Modelling a small web application]
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
