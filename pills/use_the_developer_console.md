@@ -15,10 +15,6 @@ Since the browser is a client, just like Postman, we can use it to inspect the s
 
 Use the shortcut `Option+Command+J` on Mac, or go in the `View` menu, and select `Developer` and `Developer Tools`.
 
-## Demonstration
-
-@TODO [Here's a video demonstration]()
-
 ## More resources
 
  * [Inspect Network Activity with Chrome](https://developer.chrome.com/docs/devtools/network/)
