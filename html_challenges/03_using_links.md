@@ -27,7 +27,7 @@ When the above link is clicked, the browser will send a new request `GET /about`
 
 ## Using the browser developer tools
 
-Most browsers [have integrated developer tools](../pills/use_the_developer_console.ed.md) that we can use to inspect the HTTP requests sent by the browser, and the responses it receives. Learning how to use it can be really helpful when we need to get visibility into what the browser sends and gets back through its HTTP connection with the web server.
+Most browsers [have integrated developer tools](../pills/use_the_developer_console.md) that we can use to inspect the HTTP requests sent by the browser, and the responses it receives. Learning how to use it can be really helpful when we need to get visibility into what the browser sends and gets back through its HTTP connection with the web server.
 
 When creating links between "pages", keep the developer tools open in the browser, so you can see the HTTP request being logged, and inspect its information.
 

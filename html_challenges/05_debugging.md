@@ -34,7 +34,7 @@ We can get visibility using different tools depending on the "layer":
     HTML page.
   * We can get visibility into the HTTP request and response — what data is flowing
     between the client (the web browser) and the server. We can use a client like Postman,
-    or the [Browser Developer tools](../pills/use_the_developer_console.ed.md).
+    or the [Browser Developer tools](../pills/use_the_developer_console.md).
   * We can also manually inspect the web page to see what is wrong, or check if Sinatra
     returns a helpful error message for us.
 
