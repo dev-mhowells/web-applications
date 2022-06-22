@@ -61,13 +61,16 @@ feedback. These are tagged with a 📡.
 [Work on the Chitter challenge](https://github.com/makersacademy/chitter-challenge) and
 open a pull request when you're done.
 
+<!-- OMITTED -->
+
 ## Going further
 
 This is additional reference material so you can learn to use common features and patterns
 implemented as part of web applications.
 
-1. [Creating and authenticating users](./pills/user_authentication.md)
-2. [Loading CSS or static files](./pills/loading_css_or_static_files.md)
+1. [Modelling and Planning a Web application](./pills/modelling_and_planning_web_application.ed.md)
+2. [Creating and Authenticating users](./pills/user_authentication.md)
+3. [Loading CSS or static files](./pills/loading_css_or_static_files.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

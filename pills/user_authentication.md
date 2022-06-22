@@ -34,7 +34,7 @@ class UserRepository
 
     sql = '
       INSERT INTO users (email, password)
-        VALUES($1, $2)
+        VALUES($1, $2);
     '
     sql_params = [
       new_user.email,
