@@ -54,7 +54,7 @@ feedback. These are tagged with a 📡.
 4. [Using forms to send `POST` requests.](./html_challenges/04_using_forms.md) 
 5. [Debugging a web application](./html_challenges/05_debugging.md)
 6. [Securing your application](./html_challenges/06_securing_user_input.md)
-6. [Deploying your web server](./challenges/07_deploying.md)
+6. [Deploying your web server](./html_challenges/07_deploying.md)
 
 ## Phase Four: Solo challenge
 
