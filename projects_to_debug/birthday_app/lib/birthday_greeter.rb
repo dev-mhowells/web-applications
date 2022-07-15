@@ -15,7 +15,8 @@ class BirthdayGreeter
   end
 
   def days_until_birthday(date)
-    if Date.parse(Date.today.year.to_s + "-" + date) < Date.today
+    # if the month and day is before today
+    if Date.parse(Date.today.year.to_s + "-" + date) > Date.today
       date_with_year = Date.parse(Date.today.next_year.year.to_s + "-" + date)
     else
       date_with_year = Date.parse(Date.today.year.to_s + "-" + date)

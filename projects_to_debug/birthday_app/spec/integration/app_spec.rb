@@ -16,13 +16,13 @@ describe Application do
 
       expect(response.status).to eq(200)
       expect(response.body).to include('form')
-      expect(response.body).to include('<input type="date" name="birthday"')
+      expect(response.body).to include('<input type="date" name="birthday" required pattern="\d{2}-\d{2}">')
     end
   end
 
   context 'POST /greet' do
     it 'should wish happy birthday' do
-      today_param = Date.today.strftime('%Y-%m-%d')
+      today_param = Date.today.strftime('%m-%d')
       response = post('/greet', birthday: today_param)
 
       expect(response.status).to eq(200)
@@ -30,7 +30,7 @@ describe Application do
     end
 
     it 'should indicate 7 days until birthday' do
-      today_param = (Date.today + 7).strftime('%Y-%m-%d')
+      today_param = (Date.today + 7).strftime('%m-%d')
       response = post('/greet', birthday: today_param)
 
       expect(response.status).to eq(200)
