@@ -125,6 +125,26 @@ context "POST /posts" do
 end
 ```
 
+## On Route Priority
+
+Remember that Sinatra uses the first route that matches a request. When creating a route such as `/albums/new`, a common problem you could run into would be to have another route `/albums/:id`, containing a dynamic path parameter, being used - as the parameter `:id` will "capture" the value `"new"` in the URL.
+
+```ruby
+# For a request with path `/albums/new`
+
+# This route will be used - which is probably not what we want.
+get '/albums/:id' do
+
+end
+
+# And this one is skipped
+get '/albums/new' do 
+
+end
+```
+
+An easy way to fix this is to define the routes in the reverse order - this way `/albums/new` will be used first, and then any request to a path such as `/albums/12` will get to the other route. Another way, a bit more complex, is [to configure the route parameter to match a certain format](http://sinatrarb.com/intro.html#:~:text=Route%20matching%20with%20Regular%20Expressions%3A), such as a numeric value.
+
 ## Demonstration
 
 [Video Demonstration](https://www.youtube.com/watch?v=A6xZFvUGJXs)

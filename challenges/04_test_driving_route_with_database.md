@@ -101,6 +101,8 @@ end
 
 [Use this provided codebase as a starting point.](../resources/music_library_database_app/) It contains a program that interacts with a database containing a few music albums.
 
+_To use the seed codebase, clone the whole repository of this week's module to your machine, and then access the directory in `resources/music_library_database_app`._
+
 Create a database `music_library` and setup the program.
 
 ```ruby
