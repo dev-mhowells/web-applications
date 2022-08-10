@@ -42,7 +42,7 @@ curl -X POST https://jsonplaceholder.typicode.com/todos/1
 Here's a breakdown of the request sent by the command above:
   * The first part of the URL, `https://jsonplaceholder.typicode.com`, is called the **host**. It is the address of the server itself
   * the **path** of the request is `/todos/1`
-  * the **method** is `POST` 
+  * the **method** is `POST` - you will learn more about HTTP methods in the next section, but for now remember the two most important are `GET` and `POST`.
 
 ## Demonstration
 
@@ -89,7 +89,7 @@ You should get the following response body:
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=http_bites/02_requests_and_responses.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=http_bites/02_requests_and_responses.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=http_bites/02_requests_and_responses.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=http_bites/02_requests_and_responses.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/web-applications&prefill_File=http_bites/02_requests_and_responses.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=http_bites%2F02_requests_and_responses.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=http_bites%2F02_requests_and_responses.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=http_bites%2F02_requests_and_responses.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=http_bites%2F02_requests_and_responses.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=http_bites%2F02_requests_and_responses.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
