@@ -23,9 +23,7 @@ brew tap heroku/brew && brew install heroku
 
 ## Project Setup
 
-Create a new account on Heroku if you don't have one, and go to [your applications](https://dashboard.heroku.com/apps) page.
-
-Create a new application. Choose a unique name (such as `my-sinatra-app-{your-name}`) and leave the default region.
+Create a new account on Heroku if you don't have one, then run the commands below.
 
 ```bash
 $ cd my-web-project/

@@ -32,7 +32,7 @@ You should get the JSON response in the bottom panel of the program:
 
 We can see two important things about the response:
 * its content (the JSON data).
-* its status code (`200 OK` - on the top-left corner of the panel).
+* its status code (`200 OK` - on the top-right corner of the panel).
 
 In the following exercises, you'll practice by sending requests to the Postman Echo website, which returns some pre-defined responses to some requests. You'll learn about some components of GET and POST requests.
 
