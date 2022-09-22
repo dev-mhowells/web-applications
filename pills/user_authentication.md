@@ -30,6 +30,7 @@ the user.
 
 class UserRepository
   def create(new_user)
+    # Encrypt the password to save it into the new database record.
     encrypted_password = BCrypt::Password.create(new_user.password)
 
     sql = '
@@ -47,9 +48,8 @@ class UserRepository
 
     return nil if user.nil?
 
-    encrypted_submitted_password = BCrypt::Password.create(submitted_password)
-
-    if user.password == encrypted_submitted_password
+    # Compare the submitted password with the encrypted one saved in the database
+    if submitted_password == BCrypt::Password.new(user.password)
       # login success
     else
       # wrong password
@@ -90,6 +90,9 @@ client they are using is sending many different requests to the server.
 
 ```ruby
 class Application < Sinatra::Base 
+  # Sessions are disabled by default, so this line is needed.
+  enable :sessions
+
   configure :development do
     register Sinatra::Reloader
   end
