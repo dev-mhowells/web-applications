@@ -53,7 +53,7 @@ Modify the code of the previous exercise to make sure user input is sanitised, a
 
 You can do this either by validating the request parameters (in the route), or when displaying the content (in the view). The best is probably to do both.
 
-[Next Challenge](07_deploying.md)
+[Next Challenge](07_deploying_render.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
