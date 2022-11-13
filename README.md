@@ -1,7 +1,7 @@
 # Web applications
 
 _Coaching this? Read the coach guidance
-[here.](https://github.com/makersacademy/slug/blob/main/materials/universe/databases_web_applications/web_applications/HOW_TO_COACH.x.md)_
+[here.](https://github.com/makersacademy/slug/blob/main/materials/universe/distributed_applications/web_applications/HOW_TO_COACH.x.md)_
 
 In this module you will learn to:
   * Explain how HTTP requests and responses work at a high level
@@ -71,6 +71,7 @@ implemented as part of web applications.
 1. [Modelling and Planning a Web application](./pills/modelling_and_planning_web_application.md)
 2. [Creating and Authenticating users](./pills/user_authentication.md)
 3. [Loading CSS or static files](./pills/loading_css_or_static_files.md)
+
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
