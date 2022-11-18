@@ -8,7 +8,7 @@ In this module you will learn to:
   * Write integration tests for a web application
   * Implement web routes using a lightweight web framework
   * Follow a debugging process for a web application
-  * Deploy a web application using a light cloud service such as Heroku
+  * Deploy a web application using a light cloud service such as Render
 
 ## Sequence
 
@@ -43,8 +43,8 @@ feedback. These are tagged with a 📡.
 1. [Setting up a Sinatra project](./challenges/01_setting_up_sinatra_project.md)
 2. [Building routes](./challenges/02_building_a_route.md)
 3. [Test-driving routes](./challenges/03_test_driving_a_route.md) 📡.
-4. [Test-driving routes that interact with a
-   database](./challenges/04_test_driving_route_with_database.md) 📡.
+4. [Creating a sequence diagram for a web application](./challenges/04_creating_a_sequence_diagram.md)
+5. [Test-driving routes that interact with a database](./challenges/05_test_driving_route_with_database.md) 📡.
 
 ## Phase Three: Building webpages
 

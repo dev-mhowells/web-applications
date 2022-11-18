@@ -51,12 +51,23 @@ This is a process feedback challenge. That means you should record yourself doin
 submit that recording to your coach for feedback. [How do I do
 this?](https://github.com/makersacademy/golden-square/blob/main/pills/process_feedback_challenges.md)
 
-Test-drive and implement the following changes to the `music_library_database_app` project:
-1. Add a route `GET /artists/:id` which returns an HTML page showing details for a single artist.
-2. Add a route `GET /artists` which returns an HTML page with the list of artists. This page should contain a link for each artist listed, linking to `/artists/:id` where `:id` needs to be the corresponding artist id.
+**For this challenge, you should only record the 3rd part where you create the diagram.** Make sure you also record yourself talking out loud when making the diagram, to explain it.
+
+Test-drive and implement the following changes to the `music_library_database_app` project.
+
+1. **Test-drive** a route `GET /artists/:id` which returns an HTML page showing details for a single artist.
+2. **Test-drive** a route `GET /artists` which returns an HTML page with the list of artists. This page should contain a link for each artist listed, linking to `/artists/:id` where `:id` needs to be the corresponding artist id.
+3. **Create a sequence diagram** explaining the behaviour of your program when a request is sent to `GET /artists/:id`. Make sure your diagram all includes the following:
+    * The HTTP Client
+    * The HTTP Request and the data it contains
+    * The HTTP Response and the data it contains
+    * The Application class (`app.rb`)
+    * The Repository class (`artist_repository.rb`)
+    * The View (ERB file)
+    * The Database
 
 
-[After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as03).
+[After you're done, submit your code and recording here](https://airtable.com/shr6mk28x0fy3OrxN?prefill_Item=web_as03_v2).
 
 [Next Challenge](04_using_forms.md)
 

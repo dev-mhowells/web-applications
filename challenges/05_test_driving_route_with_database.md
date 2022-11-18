@@ -148,9 +148,11 @@ This is a process feedback challenge. That means you should record yourself doin
 submit that recording to your coach for feedback. [How do I do
 this?](https://github.com/makersacademy/golden-square/blob/main/pills/process_feedback_challenges.md)
 
+**For this challenge, you should only record the 3rd part where you create the diagram.** Make sure you also record yourself talking out loud when making the diagram, to explain it.
+
 Work in the same project directory.
 
-1. Test-drive a route `GET /artists`, which returns the list of artists:
+1. **Test-drive a route `GET /artists`**, which returns the list of artists:
 ```
 # Request:
 GET /artists
@@ -159,7 +161,7 @@ GET /artists
 Pixies, ABBA, Taylor Swift, Nina Simone
 ```
 
-2. Test-drive a route `POST /artists`, which creates a new artist in the database. Your test should verify the new artist is returned in the response of `GET /artists`.
+2. **Test-drive a route `POST /artists`**, which creates a new artist in the database. Your test should verify the new artist is returned in the response of `GET /artists`.
 
 ```
 # Request:
@@ -179,7 +181,15 @@ GET /artists
 Pixies, ABBA, Taylor Swift, Nina Simone, Wild nothing
 ```
 
-[After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as02).
+3. **Create a sequence diagram** explaining the behaviour of your program when a request is sent to `POST /artists`. Make sure your diagram all includes the following:
+    * The HTTP Client
+    * The HTTP Request and the data it contains
+    * The HTTP Response and the data it contains
+    * The Application class (`app.rb`)
+    * The Repository class (`artist_repository.rb`)
+    * The Database
+
+[After you're done, submit your code and recording here](https://airtable.com/shr6mk28x0fy3OrxN?prefill_Item=web_as02_v2).
 
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
@@ -187,7 +197,7 @@ Pixies, ABBA, Taylor Swift, Nina Simone, Wild nothing
 ---
 
 **How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F04_test_driving_route_with_database.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F04_test_driving_route_with_database.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F04_test_driving_route_with_database.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F04_test_driving_route_with_database.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F04_test_driving_route_with_database.md&prefill_Sentiment=😀)  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F05_test_driving_route_with_database.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F05_test_driving_route_with_database.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F05_test_driving_route_with_database.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F05_test_driving_route_with_database.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=challenges%2F05_test_driving_route_with_database.md&prefill_Sentiment=😀)  
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->

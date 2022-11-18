@@ -101,7 +101,7 @@ Alice,Joe,Julia,Kieran,Zoe
 
 [After you're done, submit your recording here](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=web_as01).
 
-[Next Challenge](04_test_driving_route_with_database.md)
+[Next Challenge](04_creating_a_sequence_diagram.md)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 
