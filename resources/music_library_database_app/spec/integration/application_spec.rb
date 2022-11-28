@@ -10,4 +10,46 @@ describe Application do
   # class so our tests work.
   let(:app) { Application.new }
 
+  context 'GET /albums' do
+    it 'should return the list of albums' do
+      response = get('/albums')
+
+      expected_response = 'Surfer Rosa, Waterloo, Super Trouper, Bossanova, Lover, Folklore, I Put a Spell on You, Baltimore, Here Comes the Sun, Fodder on My Wings, Ring Ring'
+
+      expect(response.status).to eq(200)
+      expect(response.body).to eq(expected_response)
+    end
+  end
+
+  context "POST to /albums" do
+    it "returns 200 OK with the right content" do
+      # Send a POST request to /submit
+      # with some body parameters
+      # and returns a response object we can test.
+      response = post("/albums", title: 'Voyage', release_year: '2022', artist_id: '2')
+
+      # Assert the response status code and body.
+      expect(response.status).to eq(200)
+      expect(response.body).to eq("")
+
+      response2 = get('/albums')
+
+      expect(response2.body).to include('Voyage')
+    end
+  end
+
+  context 'GET /artists' do
+    it 'gets a list of all artists' do
+
+     response = get('/artists') 
+
+    expected_response = 'Pixies, ABBA, Taylor Swift, Nina Simone, Kiasmos'
+
+    expect(response.status).to eq(200)
+    expect(response.body).to eq(expected_response)
+
+    end
+  end
+
+
 end

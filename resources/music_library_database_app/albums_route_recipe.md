@@ -22,6 +22,6 @@ test:
 
       # Assert the response status code and body.
       expect(response.status).to eq(200)
-      expect(response.body).to eq("Alice, Joe, Zoe")
+      expect(response.body).to eq("")
     end
   end
