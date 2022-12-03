@@ -21,6 +21,16 @@ describe Application do
     end
   end
 
+  context 'GET /albums/2' do
+    it 'should return the first album' do
+      response = get('/albums/2')
+      # ('Doolittle', 1989, 1),
+      # p response.body
+      expect(response.status).to eq(200)
+      expect(response.body).to include("<h1>Surfer Rosa</h1>")
+    end
+  end
+
   context "POST to /albums" do
     it "returns 200 OK with the right content" do
       # Send a POST request to /submit
